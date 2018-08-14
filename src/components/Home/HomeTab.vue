@@ -9,7 +9,8 @@ export default {
   data () {
     return {
       msg: 'hometab',
-      activeName2: 'frist'
+      activeName2: 'frist',
+      newparamsdata: this.parmas
     }
   },
   props: {parmas: Object},

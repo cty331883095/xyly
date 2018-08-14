@@ -1,13 +1,11 @@
 <template>
 <div class="home">
   <el-tabs v-model="currentTabComponet" type="card" @tab-click="handleClick">
-    <el-tab-pane :key="item.id" v-for="item in msg" :label="item.name" name="item.name">
-      <component :is="currentTabComponet"></component>
+    <el-tab-pane :key="item.id" v-for="item in msg" :label="item.name" :name="item.name">
+      <component :is="currentTabComponet" v-bind:params="item"></component>
     </el-tab-pane>
   </el-tabs>
-
 </div>
-
 </template>
 <script>
 import HomeTab from '@/components/Home/HomeTab.vue'
@@ -26,6 +24,11 @@ export default {
       ],
       currentTabComponet: 'HomeTab',
       object: { name: 'liming', age: 25, sex: '男' }
+    }
+  },
+  methods: {
+    handleClick (tab, event) {
+
     }
   },
   mounted () {},
