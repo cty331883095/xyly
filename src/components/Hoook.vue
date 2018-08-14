@@ -4,6 +4,7 @@
   v-bind:key="item.id"
   v-bind:params="item"
 ></test-one>
+<button class="buttonstyle" @click="jumphandle"> 跳转</button>
 </div>
 
 </template>
@@ -19,12 +20,21 @@ export default {
   mounted () {
 
   },
+  methods: {
+    jumphandle: function () {
+      this.$router.push('/home')
+    }
+  },
   components: {
     TestOne
   }
 
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
+.buttonstyle{
+  color: red;
+  font-size: 25px;
+}
 
 </style>
