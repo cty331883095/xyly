@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Hoook from '@/components/Hoook'
+import Hooke from '@/components/Hooke'
 import Home from '@/components/Home'
 
 Vue.use(Router)
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hoook',
-      component: Hoook
+      name: 'Hooke',
+      component: Hooke
     },
     {
       path: '/Home',

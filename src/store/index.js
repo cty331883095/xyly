@@ -6,11 +6,25 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    Rate: window.screen.availWidth / 1920
+    Erate: 1,
+    clientWidth: 1920,
+    clientHeight: 1080,
+    url: '',
+    UserName: ''
   },
   getters: {},
   actions: {},
-  mutations: {},
+  mutations: {
+    setChartRation (state, Erate) {
+      state.Erate = Erate
+    },
+    setClientWidth (state, width) {
+      state.clientWidth = width
+    },
+    setClientHeight (state, height) {
+      state.clientHeight = height
+    }
+  },
   modules: {
     HomePage
   }
