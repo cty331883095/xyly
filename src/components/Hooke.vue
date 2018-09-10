@@ -1,16 +1,22 @@
 <template>
-<div class="container">
-
-
-</div>
+  <div class="container">
+    <Nav></nav>
+    <div class="content-box">
+      <router-view/>
+    </div>
+  </div>
 </template>
 <script>
-import TestOne from '@/components/test/TestOne'
+import Nav from '@/components/Nav'
+// import HookeStyle from '@/components/Hooke/HookeStyle'
+// import HookeHome from '@/components/Hooke/HookeHome'
+// import HookeAction from '@/components/Hooke/HookeAction'
+// import HookePlug from '@/components/Hooke/HookePlug'
 export default {
   name: 'Hooke',
   data () {
     return {
-      title: [{id: 33, name: 'xiaoming'}, {id: 43, name: 'xiaohong'}]
+
     }
   },
   mounted () {
@@ -22,15 +28,21 @@ export default {
     }
   },
   components: {
-    TestOne
+    Nav
+    // HookeStyle,
+    // HookeHome,
+    // HookeAction,
+    // HookePlug
   }
-
 }
 </script>
 <style lang="less" scoped>
-.buttonstyle{
-  color: red;
-  font-size: 25px;
+.container{
+  width: 100%;
+  height: 100%;
+  .content-box{
+    display: flex;
+    flex: 1;
+  }
 }
-
 </style>

@@ -6,7 +6,6 @@ function setFontSize () {
   let bodyNode = document.getElementsByTagName('body')[0]
   let htmlNode = document.getElementsByTagName('html')[0]
   let fontSize = bodyNode.clientWidth / 120
-  debugger
   bodyNode.style = 'font-size' + fontSize + 'px'
   htmlNode.style = 'font-size' + fontSize + 'px'
 }
