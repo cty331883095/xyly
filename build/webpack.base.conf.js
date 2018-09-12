@@ -75,17 +75,6 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-      // ,
-      // {
-      //   test: /.css$/,
-      //   loader: 'px2vw-view-loader',
-      //   query: {
-      //     viewportWidth: 1920,
-      //     viewportUnit: 'vw',
-      //     minPixelValue: 1,
-      //     decimal: 3
-      //   }
-      // }
     ]
   },
   node: {

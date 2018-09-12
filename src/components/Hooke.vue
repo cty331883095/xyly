@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <Nav></nav>
+    <Nav>
+    </nav>
     <div class="content-box">
       <router-view/>
     </div>
@@ -37,12 +38,14 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.container{
+.container {
   width: 100%;
   height: 100%;
-  .content-box{
+  overflow-x: hidden;
+  overflow-y: auto;
+  .content-box {
     display: flex;
-    flex: 1;
+    flex:1;
   }
 }
 </style>

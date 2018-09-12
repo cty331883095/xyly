@@ -33,7 +33,9 @@ export default {
 </script>
 <style lang="less" scoped>
 .plug-box{
-  color: #000;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 </style>

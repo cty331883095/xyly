@@ -38,7 +38,7 @@ export default {
 <style lang="less" scoped>
 .nav-box {
   width: 100%;
-  height: 170px;
+  height: 150px;
   background: #242424;
   display: flex;
   flex-direction: column;
