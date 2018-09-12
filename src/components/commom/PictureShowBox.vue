@@ -23,40 +23,27 @@ export default {
     }
   },
   props: ['num'],
-  computed: {
-
-  },
-  mounted () {
-
-  },
-  watch () {
-
-  },
-  methods: {
-
-  },
-  components: {
-
-  }
-
+  computed: {},
+  mounted () {},
+  watch () {},
+  methods: {},
+  components: {}
 }
 </script>
 <style lang="less" scoped>
-.Pictures-box{
-  margin-top:20px;
+.Pictures-box {
+  margin-top: 20px;
+  margin-bottom: 40px;
   display: flex;
-  width:100%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap:wrap;
-  .img-item{
-    width:313px;
+  flex-wrap: wrap;
+  .img-item {
+    width: 313px;
     height: 200px;
     margin: 10px 0;
   }
-
-
 }
-
 </style>

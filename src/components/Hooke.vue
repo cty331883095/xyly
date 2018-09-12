@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Nav>
-    </nav>
+    </Nav>
     <div class="content-box">
       <router-view/>
     </div>
@@ -9,10 +9,6 @@
 </template>
 <script>
 import Nav from '@/components/Nav'
-// import HookeStyle from '@/components/Hooke/HookeStyle'
-// import HookeHome from '@/components/Hooke/HookeHome'
-// import HookeAction from '@/components/Hooke/HookeAction'
-// import HookePlug from '@/components/Hooke/HookePlug'
 export default {
   name: 'Hooke',
   data () {

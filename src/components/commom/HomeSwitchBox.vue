@@ -19,7 +19,7 @@
 import PictureShowBox from '@/components/commom/PictureShowBox.vue'
 export default {
   name: 'HomeSwitchBox',
-  data() {
+  data () {
     return {
       switchTitle: [
         { id: 1, name: '插件', type: 'plug' },
@@ -30,14 +30,11 @@ export default {
     }
   },
   props: ['params'],
-  computed: {
-  },
-  mounted() {
-  },
-  watch() {
-  },
+  computed: {},
+  mounted () {},
+  watch () {},
   methods: {
-    clickHander(value) {
+    clickHander (value) {
       this.num = value
     }
   },
@@ -70,21 +67,21 @@ export default {
         cursor: pointer;
       }
       .item-li-componets {
-        background-image: url('~@/assets/img/componetsn.png');
+        background-image: url("~@/assets/img/componetsn.png");
         &.active {
-          background-image: url('~@/assets/img/componetsh.png');
+          background-image: url("~@/assets/img/componetsh.png");
         }
       }
       .item-li-action {
-        background-image: url('~@/assets/img/actionn.png');
+        background-image: url("~@/assets/img/actionn.png");
         &.active {
-          background-image: url('~@/assets/img/actionh.png');
+          background-image: url("~@/assets/img/actionh.png");
         }
       }
       .item-li-effect {
-        background-image: url('~@/assets/img/effectn.png');
+        background-image: url("~@/assets/img/effectn.png");
         &.active {
-          background-image: url('~@/assets/img/effecth.png');
+          background-image: url("~@/assets/img/effecth.png");
         }
       }
     }
