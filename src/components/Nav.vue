@@ -4,7 +4,7 @@
       <img src="~@/assets/img/logo.png" class="img-style1">
       <div class="login-style">
         <img src="~@/assets/img/loginperson.png" class="img-style2" alt="">
-        <span class="txt">登陆</span>
+        <span class="txt" @click="loginTo">登陆</span>
       </div>
     </div>
     <div class="switch-box">
@@ -27,6 +27,9 @@ export default {
   methods: {
     jumphandle: function () {
       this.$router.push('/home')
+    },
+    loginTo () {
+      console.log('登录成功')
     }
   },
   components: {
@@ -64,6 +67,7 @@ export default {
     }
     .txt{
       font-size: 25px;
+      cursor: pointer;
       color: rgba(255,255,255,0.5)
     }
     }

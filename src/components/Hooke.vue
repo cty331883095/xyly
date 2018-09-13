@@ -1,47 +1,44 @@
 <template>
-  <div class="container">
-    <Nav>
-    </Nav>
-    <div class="content-box">
-      <router-view/>
+  <div class="container-box">
+    <div class="container">
+    <Nav></Nav>
+      <div class="content-box">
+        <router-view/>
+      </div>
     </div>
-  </div>
+   <hooke-login></hooke-login>
+   </div>
 </template>
 <script>
 import Nav from '@/components/Nav'
+import HookeLogin from '@/components/commom/HookeLogin'
 export default {
   name: 'Hooke',
   data () {
-    return {
-
-    }
+    return {}
   },
-  mounted () {
-
-  },
-  methods: {
-    jumphandle: function () {
-      this.$router.push('/home')
-    }
-  },
+  mounted () {},
+  methods: {},
   components: {
-    Nav
-    // HookeStyle,
-    // HookeHome,
-    // HookeAction,
-    // HookePlug
+    Nav,
+    HookeLogin
   }
 }
 </script>
 <style lang="less" scoped>
-.container {
+.container-box {
+  position: relative;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  .content-box {
-    display: flex;
-    flex:1;
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .content-box {
+      display: flex;
+      flex: 1;
+    }
   }
 }
 </style>
