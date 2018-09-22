@@ -1,6 +1,6 @@
 <template>
   <div class="Pictures-box">
-    <img class="img-item" :src="item.src" v-for="item in imgsdata" :key="item.id">
+    <img class="img-item" :src="'../../../static/rect/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id">
   </div>
 </template>
 <script>
@@ -11,15 +11,15 @@ export default {
     return {
       title: 'templet',
       imgsdata: [
-        { id: 1, src: '' },
-        { id: 2, src: '' },
-        { id: 3, src: '' },
-        { id: 4, src: '' },
-        { id: 5, src: '' },
-        { id: 6, src: '' },
-        { id: 7, src: '' },
-        { id: 8, src: '' },
-        { id: 9, src: '' }
+        { id: 1, src: '0_001' },
+        { id: 2, src: '0_002' },
+        { id: 3, src: '0_003' },
+        { id: 4, src: '0_004' },
+        { id: 5, src: '0_005' },
+        { id: 6, src: '0_006' },
+        { id: 7, src: '0_007' },
+        { id: 8, src: '0_008' },
+        { id: 9, src: '0_009' }
       ]
     }
   },

@@ -35,7 +35,9 @@ export default {
 .plug-box{
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 100%;
+  height: 100%;
+  color: #000;
 }
 
 </style>

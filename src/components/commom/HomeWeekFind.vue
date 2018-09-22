@@ -4,7 +4,7 @@
       <span class="title">发现本周精选</span>
       <span class="commit">我们的精选系列包括最佳插件，动作，特效。所有的这些都是由我们的质量团队精心挑选。</span>
       <div class="imgs">
-        <img :src="item.src" v-for="item in imgsdata" :key="item.id" class="item-img">
+        <img :src="'../../../static/square/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id" class="item-img">
       </div>
     </div>
     <div class="button-box">
@@ -19,16 +19,16 @@ export default {
     return {
       title: 'templet',
       imgsdata: [
-        { id: 1, src: '' },
-        { id: 2, src: '' },
-        { id: 3, src: '' },
-        { id: 4, src: '' },
-        { id: 5, src: '' },
-        { id: 6, src: '' },
-        { id: 7, src: '' },
-        { id: 8, src: '' },
-        { id: 9, src: '' },
-        { id: 10, src: '' }
+        { id: 1, src: '0_001' },
+        { id: 2, src: '0_002' },
+        { id: 3, src: '0_003' },
+        { id: 4, src: '0_004' },
+        { id: 5, src: '0_005' },
+        { id: 6, src: '0_006' },
+        { id: 7, src: '0_007' },
+        { id: 8, src: '0_008' },
+        { id: 9, src: '0_009' },
+        { id: 10, src: '0_010' }
       ]
     }
   },
