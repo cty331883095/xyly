@@ -1,7 +1,7 @@
 <template>
   <div class="home-top">
     <div class="content-warp">
-      <span class="title">{{3,550}}插件，动作，效果</span>
+      <span class="title">{{'3,550'}}插件，动作，效果</span>
       <span class="txt">节省你的执行时间</span>
     </div>
     <div class="search-box">
