@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: 'PictureShowBox',
   data () {
@@ -23,7 +24,9 @@ export default {
     }
   },
   props: ['num'],
-  computed: {},
+  computed: {
+
+  },
   mounted () {},
   watch () {},
   methods: {},

@@ -10,7 +10,7 @@ import HookePlug from '@/components/Hooke/HookePlug'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',

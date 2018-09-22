@@ -5,7 +5,7 @@
 function setFontSize () {
   let bodyNode = document.getElementsByTagName('body')[0]
   let htmlNode = document.getElementsByTagName('html')[0]
-  let fontSize = bodyNode.clientWidth / 120
+  let fontSize = bodyNode.clientWidth / 100
   bodyNode.style = 'font-size' + fontSize + 'px'
   htmlNode.style = 'font-size' + fontSize + 'px'
 }
@@ -14,8 +14,10 @@ export default {
   mounted () {
     let self = this
     window.onresize = function temp () {
-      let width = document.documentElement.clientWidth || document.body.clientWidth
-      let height = document.documentElement.clientHeight || document.body.lientHeight
+      let width =
+        document.documentElement.clientWidth || document.body.clientWidth
+      let height =
+        document.documentElement.clientHeight || document.body.lientHeight
       width = width > 1360 ? width : 1360
       self.$store.commit('setChartRation', width / 1920)
       self.$store.commit('setClientWidth', width)
@@ -23,7 +25,8 @@ export default {
       setFontSize()
     }
     setFontSize()
-    let width = document.documentElement.clientWidth || document.body.clientWidth
+    let width =
+      document.documentElement.clientWidth || document.body.clientWidth
     width = width > 1360 ? width : 1360
     self.$store.commit('setChartRation', width / 1920)
   }
@@ -31,9 +34,9 @@ export default {
 </script>
 
 <style lang="less">
-@font-face{
+@font-face {
   font-family: Medium;
-  src:url('~@/assets/font/SourceHanSans-Medium.otf')
+  src: url("~@/assets/font/SourceHanSans-Medium.otf");
 }
 html,
 body {
@@ -43,14 +46,14 @@ body {
   height: 100%;
   font-family: Medium;
 }
-body{
+body {
   position: relative;
   overflow: hidden;
   font-size: 20px;
   color: #fff;
 }
-*{
-  border:none;
+* {
+  border: none;
   padding: 0;
   margin: 0;
   outline: none;

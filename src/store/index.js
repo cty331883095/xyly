@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {HomePage} from './modules/HomePage.js'
-
+import {
+  Hooke
+} from './modules/Hooke'
 Vue.use(Vuex)
-
 const store = new Vuex.Store({
   state: {
     Erate: 1,
     clientWidth: 1920,
     clientHeight: 1080,
     url: '',
-    UserName: ''
+    UserName: '',
+    ShowPopwindow: false
   },
   getters: {},
   actions: {},
@@ -23,10 +24,14 @@ const store = new Vuex.Store({
     },
     setClientHeight (state, height) {
       state.clientHeight = height
+    },
+    setShowPopwindow (state, type) {
+      state.ShowPopwindow = type
     }
+
   },
   modules: {
-    HomePage
+    Hooke
   }
 })
 export default store

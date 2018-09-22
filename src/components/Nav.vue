@@ -14,28 +14,23 @@
 </template>
 <script>
 import HookeSwitch from '@/components/Hooke/HookeSwitch'
+import { mapMutations } from 'vuex'
 export default {
   name: 'Hooke',
   data () {
-    return {
-
-    }
+    return {}
   },
-  mounted () {
-
-  },
+  mounted () {},
   methods: {
-    jumphandle: function () {
-      this.$router.push('/home')
-    },
+    ...mapMutations(['setShowPopwindow']),
     loginTo () {
       console.log('登录成功')
+      this.setShowPopwindow(true)
     }
   },
   components: {
     HookeSwitch
   }
-
 }
 </script>
 <style lang="less" scoped>
@@ -53,26 +48,26 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .img-style1{
+    .img-style1 {
       margin-left: 100px;
     }
-    .login-style{
+    .login-style {
       margin-right: 100px;
       display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    .img-style2{
-      margin-right: 5px;
-    }
-    .txt{
-      font-size: 25px;
-      cursor: pointer;
-      color: rgba(255,255,255,0.5)
-    }
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      .img-style2 {
+        margin-right: 5px;
+      }
+      .txt {
+        font-size: 25px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
-  .switch-box{
+  .switch-box {
     margin-left: 100px;
   }
 }
