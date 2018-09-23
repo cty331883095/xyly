@@ -34,10 +34,11 @@ export default {
 </script>
 <style lang="less" scoped>
 .plug-box{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+  // display: flex;
+  // flex: 1;
+  // flex-direction: column;
+  // width: 100%;
+  // height: 100%;
   color: #000;
   padding: 0 86px;
 }

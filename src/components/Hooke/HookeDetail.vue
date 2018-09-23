@@ -8,7 +8,12 @@
   </div>
   <div class="detail-content">
     <div class="detail-box-left">
-      <div v-show="num===1">项目细节</div>
+      <div class="warp-box-one" v-show="num===1">
+        <div class="img-box">
+          <img :src="'./../../../../static/img/ex110.jpg'" alt="">
+        </div>
+
+      </div>
       <div v-show="num===2">评论</div>
     </div>
     <div class="detail-box-right">
@@ -102,16 +107,23 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     .detail-box-left {
       width: 1000px;
-      height: 1000px;
+      margin-bottom: 30px;
+      // height: 1000px;
       border: 1px solid #ebebeb;
       background: #f4f4f4;
+      .warp-box-one{
+        width: 100%;
+        // height: 200px;
+        padding: 10px 10px 0 10px;
+        // overflow: hidden;
+      }
     }
     .detail-box-right {
       width: 400px;
-      height: 1000px;
+      // height: 1000px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;

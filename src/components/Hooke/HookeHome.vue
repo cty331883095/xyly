@@ -7,14 +7,12 @@
     </home-top-search-box>
     <home-week-find></home-week-find>
     <home-switch-box></home-switch-box>
-    <bottom-navigation></bottom-navigation>
   </div>
 </template>
 <script>
 import HomeTopSearchBox from '@/components/commom/HomeTopSearchBox.vue'
 import HomeWeekFind from '@/components/commom/HomeWeekFind.vue'
 import HomeSwitchBox from '@/components/commom/HomeSwitchBox.vue'
-import BottomNavigation from '@/components/commom/BottomNavigation.vue'
 export default {
   name: 'HookeHome',
   data () {
@@ -30,8 +28,7 @@ export default {
   components: {
     HomeTopSearchBox,
     HomeWeekFind,
-    HomeSwitchBox,
-    BottomNavigation
+    HomeSwitchBox
   }
 }
 </script>
@@ -39,7 +36,7 @@ export default {
 .home-box {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
 }
 </style>

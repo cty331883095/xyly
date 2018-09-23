@@ -2,14 +2,15 @@
 <div class="right-box">
    <div class="right-box-top">
      <div class="content-box">
-       <img :src="item.src"  class="img-style" :class="{active:item.id===index}" v-for="item in SwitchArr" :key="item.id" @click="clickHandler(item.id)">
+       <!-- <img :src="item.src"  class="img-style" :class="{active:item.id===index}" v-for="item in SwitchArr" :key="item.id" @click="clickHandler(item.id)"> -->
+       <div  class="img-style1" :class="{active:1===index}"  @click="clickHandler(1)"></div>
+       <div   class="img-style2" :class="{active:2===index}"  @click="clickHandler(2)"></div>
      </div>
 
     </div>
     <div class="right-box-content">
         <div v-show="index ===1">
           <category-card-style-one v-for="item in arr" :key="item.id" :params="item.params"></category-card-style-one>
-
         </div>
         <div v-show="index ===2">
           <category-card-style-two v-for="item in arr2" :key="item.id" :params="item.params"></category-card-style-two>
@@ -78,18 +79,6 @@ export default {
             txt2: '最低Adobe CS版本:CS5',
             value: 19
           }
-        },
-        {
-          id: 5,
-          name: 'str',
-          params: {
-            imgsrc: '../../../static/img/ex.png',
-            title1: '软水菜photoshop动作',
-            title2: 'Satum62',
-            txt1: '再添加Ons / photoshop / 操作 / 照片效果',
-            txt2: '最低Adobe CS版本:CS5',
-            value: 20
-          }
         }
       ],
       arr2: [
@@ -97,57 +86,146 @@ export default {
           id: 1,
           name: 'str',
           params: [
-            {id: 1, str: '10种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 2, str: '11种款式金色文字', value: 30, imgsrc: '../../../static/img/ex.png'},
-            {id: 3, str: '12种款式金色文字', value: 10, imgsrc: '../../../static/img/ex.png'},
-            {id: 4, str: '13种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 5, str: '14种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'}
+            {
+              id: 1,
+              str: '10种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 2,
+              str: '11种款式金色文字',
+              value: 30,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 3,
+              str: '12种款式金色文字',
+              value: 10,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 4,
+              str: '13种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 5,
+              str: '14种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            }
           ]
         },
         {
           id: 2,
           name: 'str',
           params: [
-            {id: 1, str: '10种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 2, str: '11种款式金色文字', value: 30, imgsrc: '../../../static/img/ex.png'},
-            {id: 3, str: '12种款式金色文字', value: 10, imgsrc: '../../../static/img/ex.png'},
-            {id: 4, str: '13种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 5, str: '14种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'}
+            {
+              id: 1,
+              str: '10种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 2,
+              str: '11种款式金色文字',
+              value: 30,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 3,
+              str: '12种款式金色文字',
+              value: 10,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 4,
+              str: '13种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 5,
+              str: '14种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            }
           ]
         },
         {
           id: 3,
           name: 'str',
           params: [
-            {id: 1, str: '10种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 2, str: '11种款式金色文字', value: 30, imgsrc: '../../../static/img/ex.png'},
-            {id: 3, str: '12种款式金色文字', value: 10, imgsrc: '../../../static/img/ex.png'},
-            {id: 4, str: '13种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 5, str: '14种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'}
+            {
+              id: 1,
+              str: '10种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 2,
+              str: '11种款式金色文字',
+              value: 30,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 3,
+              str: '12种款式金色文字',
+              value: 10,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 4,
+              str: '13种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 5,
+              str: '14种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            }
           ]
         },
         {
           id: 4,
           name: 'str',
           params: [
-            {id: 1, str: '10种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 2, str: '11种款式金色文字', value: 30, imgsrc: '../../../static/img/ex.png'},
-            {id: 3, str: '12种款式金色文字', value: 10, imgsrc: '../../../static/img/ex.png'},
-            {id: 4, str: '13种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 5, str: '14种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'}
-          ]
-        }, {
-          id: 5,
-          name: 'str',
-          params: [
-            {id: 1, str: '10种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 2, str: '11种款式金色文字', value: 30, imgsrc: '../../../static/img/ex.png'},
-            {id: 3, str: '12种款式金色文字', value: 10, imgsrc: '../../../static/img/ex.png'},
-            {id: 4, str: '13种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'},
-            {id: 5, str: '14种款式金色文字', value: 3, imgsrc: '../../../static/img/ex.png'}
+            {
+              id: 1,
+              str: '10种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 2,
+              str: '11种款式金色文字',
+              value: 30,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 3,
+              str: '12种款式金色文字',
+              value: 10,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 4,
+              str: '13种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            },
+            {
+              id: 5,
+              str: '14种款式金色文字',
+              value: 3,
+              imgsrc: '../../../static/img/ex.png'
+            }
           ]
         }
-
       ]
     }
   },
@@ -185,15 +263,27 @@ export default {
       align-items: center;
       border-bottom: 1px solid #eaeaea;
       .img-style {
-        width: 30px;
-        height: 30px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
         margin: 0 5px;
         cursor: pointer;
+      }
+      .img-style1 {
+        .img-style;
+        width: 31px;
+        height: 31px;
+        background-image: url('~@/assets/img/icon-1-n.png');
         &.active {
-          background: lawngreen;
+          background-image: url('~@/assets/img/icon-1-H.png');
         }
-        &:hover {
-          background: lawngreen;
+      }
+       .img-style2 {
+        .img-style;
+        width: 26px;
+        height: 26px;
+        background-image: url('~@/assets/img/icon-2-n.png');
+        &.active {
+          background-image: url('~@/assets/img/icon-2-h.png');
         }
       }
     }
@@ -201,6 +291,7 @@ export default {
   .right-box-content {
     width: 100%;
     height: 100%;
+    margin-bottom: 30px;
   }
 }
 </style>

@@ -2,12 +2,14 @@
 <div class="action-box">
   <hooke-plug-search></hooke-plug-search>
   <hooke-plug-category></hooke-plug-category>
+  <!-- <bottom-navigation></bottom-navigation> -->
 </div>
 
 </template>
 <script>
 import HookePlugSearch from '@/components/commom/HookePlugSearch.vue'
 import HookePlugCategory from '@/components/commom/HookePlugCategory.vue'
+// import BottomNavigation from '@/components/commom/BottomNavigation.vue'
 export default {
   name: 'HookeAction',
   data () {
@@ -28,6 +30,7 @@ export default {
   components: {
     HookePlugSearch,
     HookePlugCategory
+    // BottomNavigation
 
   }
 

@@ -9,7 +9,6 @@
      <span class="txt2">photoshop插件</span>
      </div>
 </div>
-
 </template>
 <script>
 export default {
@@ -22,18 +21,13 @@ export default {
   },
   props: ['params'],
   computed: {
-
   },
   mounted () {
-
   },
   methods: {
-
   },
   components: {
-
   }
-
 }
 </script>
 <style lang="less" scoped>

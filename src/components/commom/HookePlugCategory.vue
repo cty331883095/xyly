@@ -36,7 +36,6 @@ export default {
 <style lang="less" scoped>
 .category-box{
   width: 100%;
-  height:1000px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
