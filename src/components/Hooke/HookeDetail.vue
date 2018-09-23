@@ -7,8 +7,28 @@
     </ul>
   </div>
   <div class="detail-content">
-    <div class="detail-box-left"></div>
-    <div class="detail-box-right"></div>
+    <div class="detail-box-left">
+      <div v-show="num===1">项目细节</div>
+      <div v-show="num===2">评论</div>
+    </div>
+    <div class="detail-box-right">
+      <div class="load-box">
+        <div class="content-txt">
+          <span class="txt1-box">浩克网所有作品均是用户自行上传分享并拥有版权或使用权,仅供网游学习交流，未经上传用户书面授权，请勿作他用。</span>
+          <span class="txt2-box">下载7</span>
+        </div>
+          <div class="button-box">
+              <button type="button" class="button-style">下载</button>
+          </div>
+      </div>
+      <div class="author-box">
+
+      </div>
+      <div class="info-box">
+
+      </div>
+
+    </div>
 
   </div>
 </div>
@@ -76,29 +96,75 @@ export default {
       }
     }
   }
-  .detail-content{
+  .detail-content {
     margin-top: 10px;
     padding: 0 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .detail-box-left{
-      width:1000px;
+    .detail-box-left {
+      width: 1000px;
       height: 1000px;
-      border:1px solid #EBEBEB;
-      background: #F4F4F4;
-
+      border: 1px solid #ebebeb;
+      background: #f4f4f4;
     }
-    .detail-box-right{
-      width:400px;
+    .detail-box-right {
+      width: 400px;
       height: 1000px;
-      border:1px solid #EBEBEB;
-      background: #F4F4F4;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .load-box {
+        width: 100%;
+        height: 250px;
+        border: 1px solid #ebebeb;
+        background: #f4f4f4;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .content-txt {
+          display: flex;
+          flex-direction: row;
+          .txt1-box {
+            width: 250px;
+            height: 200px;
+            font-size: 14px;
+          }
+          .txt2-box {
+            font-size: 25px;
+            margin-left: 10px;
+          }
+        }
+        .button-box{
+          .button-style{
+            width: 220px;
+            height: 50px;
+            background: #ACCE22;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 25px;
+          }
+        }
+      }
+      .author-box {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #ebebeb;
+        background: #f4f4f4;
+        margin-top: 20px;
+      }
+      .info-box {
+        width: 100%;
+        height: 290px;
+        border: 1px solid #ebebeb;
+        background: #f4f4f4;
+        margin-top: 20px;
+      }
     }
-
   }
-
 }
 </style>
