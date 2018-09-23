@@ -4,7 +4,7 @@
       <span class="title">发现本周精选</span>
       <span class="commit">我们的精选系列包括最佳插件，动作，特效。所有的这些都是由我们的质量团队精心挑选。</span>
       <div class="imgs">
-        <img :src="'../../../static/square/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id" class="item-img">
+        <img :src="'../../../static/square/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id" class="item-img" @click=clickHandler(111)>
       </div>
     </div>
     <div class="button-box">
@@ -13,6 +13,7 @@
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'HomeWeekFind',
   data () {
@@ -40,7 +41,11 @@ export default {
 
   },
   methods: {
-
+    ...mapMutations(['setNun']),
+    clickHandler (params) {
+      this.setNun(5)
+      this.$router.push('/detail/' + params)
+    }
   },
   components: {
 
@@ -79,6 +84,7 @@ export default {
         width: 80px;
         height: 80px;
         margin: 0 10px;
+        cursor: pointer;
       }
     }
   }

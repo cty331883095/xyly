@@ -1,11 +1,12 @@
 <template>
   <ul class="item-ul">
-    <li class="item-li" v-for="item in switchTitle" :key="item.id" :class="{'yellow':1===item.id,'active':num===item.id}" @click=clickHandler(item.id,item.type)>
+    <li class="item-li" v-show="!(5===item.id)" v-for="item in switchTitle" :key="item.id" :class="{'yellow':1===item.id,'active':num===item.id}" @click=clickHandler(item.id,item.type)>
       {{item.name}}
     </li>
   </ul>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'HookeSwitch',
   data () {
@@ -14,19 +15,21 @@ export default {
         { id: 1, name: '主页', type: 'home' },
         { id: 2, name: '插件', type: 'plug' },
         { id: 3, name: '动作', type: 'action' },
-        { id: 4, name: '样式', type: 'style' }
-      ],
-      num: 1
+        { id: 4, name: '样式', type: 'style' },
+        { id: 5, name: '详情', type: 'detail' }
+      ]
     }
   },
   props: ['params'],
   computed: {
+    ...mapState(['num'])
   },
   mounted () {
   },
   methods: {
+    ...mapMutations(['setNun']),
     clickHandler (num, type) {
-      this.num = num
+      this.setNun(num)
       this.$router.push('/' + type)
     }
   },

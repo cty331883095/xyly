@@ -6,6 +6,7 @@ import HookeStyle from '@/components/Hooke/HookeStyle'
 import HookeHome from '@/components/Hooke/HookeHome'
 import HookeAction from '@/components/Hooke/HookeAction'
 import HookePlug from '@/components/Hooke/HookePlug'
+import HookeDetail from '@/components/Hooke/HookeDetail'
 
 Vue.use(Router)
 
@@ -32,6 +33,10 @@ export default new Router({
         {
           path: '/style',
           component: HookeStyle
+        },
+        {
+          path: '/detail/:id',
+          component: HookeDetail
         }
       ]
     }

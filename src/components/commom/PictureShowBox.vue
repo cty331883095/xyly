@@ -1,34 +1,36 @@
 <template>
   <div class="Pictures-box">
-    <img class="img-item" :src="'../../../static/rect/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id">
+    <img class="img-item" :src="'../../../static/rect/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id" @click=clickHandler(110)>
   </div>
 </template>
 <script>
-
+import { mapMutations } from 'vuex'
 export default {
   name: 'PictureShowBox',
   data () {
     return {
-      title: 'templet',
-      imgsdata: [
-        { id: 1, src: '0_001' },
-        { id: 2, src: '0_002' },
-        { id: 3, src: '0_003' },
-        { id: 4, src: '0_004' },
-        { id: 5, src: '0_005' },
-        { id: 6, src: '0_006' },
-        { id: 7, src: '0_007' },
-        { id: 8, src: '0_008' },
-        { id: 9, src: '0_009' }
-      ]
+
     }
   },
-  props: ['num'],
+  props: {
+    imgsdata: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
   computed: {
 
   },
   mounted () {},
-  methods: {},
+  methods: {
+    ...mapMutations(['setNun']),
+    clickHandler (params) {
+      this.setNun(5)
+      this.$router.push('/detail/' + params)
+    }
+  },
   components: {}
 }
 </script>
@@ -46,6 +48,7 @@ export default {
     width: 313px;
     height: 200px;
     margin: 10px 0;
+    cursor: pointer;
   }
 }
 </style>

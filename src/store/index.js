@@ -11,7 +11,8 @@ const store = new Vuex.Store({
     clientHeight: 1080,
     url: '',
     UserName: '',
-    ShowPopwindow: false
+    ShowPopwindow: false,
+    num: 1
   },
   getters: {},
   actions: {},
@@ -27,6 +28,9 @@ const store = new Vuex.Store({
     },
     setShowPopwindow (state, type) {
       state.ShowPopwindow = type
+    },
+    setNun (state, num) {
+      state.num = num
     }
 
   },

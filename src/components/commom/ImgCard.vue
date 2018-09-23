@@ -1,6 +1,6 @@
 <template>
   <div class="box-wrap">
-      <img :src="params"  class="img-style">
+      <img :src="params"  class="img-style" @click=clickHandler(118)>
       <div class="bottom-box">
         <div class="like" @click="likeHandler"></div>
         <div class="collect" @click="collectHandler"></div>
@@ -9,6 +9,7 @@
     </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'ImgCard',
   data () {
@@ -20,6 +21,11 @@ export default {
   computed: {},
   mounted () {},
   methods: {
+    ...mapMutations(['setNun']),
+    clickHandler (params) {
+      this.setNun(5)
+      this.$router.push('/detail/' + params)
+    },
     likeHandler () {
       console.log('like')
     },
