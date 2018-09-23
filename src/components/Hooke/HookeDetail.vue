@@ -10,7 +10,31 @@
     <div class="detail-box-left">
       <div class="warp-box-one" v-show="num===1">
         <div class="img-box">
-          <img :src="'./../../../../static/img/ex110.jpg'" alt="">
+          <img class="img-style" :src="'./../../../../static/img/ex110.jpg'" alt="这是一张图片">
+        </div>
+        <div class="icon-box">
+          <div class="tolike-box"></div>
+          <div class="tocollect-box"></div>
+        </div>
+        <div class="info-card-box">
+          <span class="txt1">Photoshop动作</span>
+          <div class="info-card-warp">
+            <span>3D文字效果套装1</span>
+            <span>16文字样式</span>
+            <span>16完全分层的PSD</span>
+            <span>文本适用于智能对象图层</span>
+            <span>2000x1500像素dpi</span>
+            <span>附加帮助文字和字体链接</span>
+            <!-- <pre class="pre-style">
+              3D文字效果套装1
+              16文字样式
+              16完全分层的PSD
+              文本适用于智能对象图层
+              2000x1500像素dpi
+              附加帮助文字和字体链接
+            </pre> -->
+          </div>
+            <span class="commit-txt">都是用心做的，希望你能喜欢它</span>
         </div>
 
       </div>
@@ -111,14 +135,62 @@ export default {
     .detail-box-left {
       width: 1000px;
       margin-bottom: 30px;
-      // height: 1000px;
-      border: 1px solid #ebebeb;
-      background: #f4f4f4;
-      .warp-box-one{
+
+      .warp-box-one {
         width: 100%;
-        // height: 200px;
-        padding: 10px 10px 0 10px;
-        // overflow: hidden;
+        .img-box {
+          border: 1px solid #ebebeb;
+          padding: 10px 10px 0 10px;
+          background: #f4f4f4;
+          .img-style {
+            width: 100%;
+          }
+        }
+        .icon-box {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          .tolike-box {
+            width: 253px;
+            height: 55px;
+            background-image: url("~@/assets/img/tolike.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+          }
+          .tocollect-box {
+            width: 253px;
+            height: 55px;
+            background-image: url("~@/assets/img/tocollect.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+        .info-card-box {
+          margin-top: 30px;
+          .txt1 {
+            margin-left: 20px;
+          }
+          .info-card-warp {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e6e6e6;
+            border-top: 1px solid #e6e6e6;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 10px 0 10px 20px;
+            font-size: 16px;
+            color: #949091;
+          }
+          .commit-txt{
+            margin-left:20px;
+            color: #949091;
+            font-size: 20px;
+          }
+        }
       }
     }
     .detail-box-right {
@@ -151,11 +223,11 @@ export default {
             margin-left: 10px;
           }
         }
-        .button-box{
-          .button-style{
+        .button-box {
+          .button-style {
             width: 220px;
             height: 50px;
-            background: #ACCE22;
+            background: #acce22;
             border-radius: 5px;
             color: #fff;
             font-size: 25px;
