@@ -19,8 +19,6 @@
     "jsdom": "^11.12.0",
     "location": "0.0.1",
     "lodash": "^4.17.10",
-    "maptalks": "^0.40.5",
-    "maptalks.heatmap": "^0.5.4",
     "mockjs": "^1.0.1-beta3",
     "navigator": "^1.0.1",
     "qs": "^6.5.2",

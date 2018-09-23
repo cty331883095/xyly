@@ -3,19 +3,12 @@
   <div class="left-box">
     <hooke-plug-category-left></hooke-plug-category-left>
   </div>
-  <div class="right-box">
-    <div class="right-box-top">
-      <hooke-plug-category-top></hooke-plug-category-top>
-    </div>
-    <div class="right-box-content"></div>
+      <hooke-plug-category-right></hooke-plug-category-right>
   </div>
-
-</div>
-
 </template>
 <script>
 import HookePlugCategoryLeft from '@/components/commom/HookePlugCategoryLeft.vue'
-import HookePlugCategoryTop from '@/components/commom/HookePlugCategoryTop.vue'
+import HookePlugCategoryRight from '@/components/commom/HookePlugCategoryRight.vue'
 export default {
   name: 'HookePlugCategory',
   data () {
@@ -29,14 +22,11 @@ export default {
   mounted () {
 
   },
-  watch () {
-
-  },
   methods: {
 
   },
   components: {
-    HookePlugCategoryTop,
+    HookePlugCategoryRight,
     HookePlugCategoryLeft
 
   }
@@ -55,27 +45,5 @@ export default {
     width: 250px;
     height: 100%;
   }
-  .right-box{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    .right-box-top{
-      width: 100%;
-      height: 110px;
-
-    }
-    .right-box-content{
-      width: 100%;
-      height: 100%;
-      background: lawngreen;
-
-    }
-
-  }
-
 }
 </style>

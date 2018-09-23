@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       switchTitle: [
-        { id: 1, name: '主页', type: '' },
+        { id: 1, name: '主页', type: 'home' },
         { id: 2, name: '插件', type: 'plug' },
         { id: 3, name: '动作', type: 'action' },
         { id: 4, name: '样式', type: 'style' }
@@ -23,8 +23,6 @@ export default {
   computed: {
   },
   mounted () {
-  },
-  watch () {
   },
   methods: {
     clickHandler (num, type) {

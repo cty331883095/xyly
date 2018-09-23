@@ -43,7 +43,6 @@ export default {
     ...mapState(['ShowPopwindow'])
   },
   mounted () {},
-  watch () {},
   methods: {
     ...mapMutations(['setShowPopwindow']),
     outlogin () {

@@ -22,9 +22,6 @@ export default {
   mounted () {
 
   },
-  watch () {
-
-  },
   methods: {
 
   },

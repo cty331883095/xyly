@@ -61,4 +61,7 @@ body {
   box-sizing: border-box;
   user-select: none;
 }
+.el-collapse-item__header,.el-collapse-item__wrap{
+  border-bottom: 0 solid #ebeef5;
+}
 </style>

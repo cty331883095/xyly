@@ -17,7 +17,9 @@ export default {
   data () {
     return {}
   },
-  mounted () {},
+  mounted () {
+    this.$router.push('/home')
+  },
   methods: {},
   components: {
     Nav,

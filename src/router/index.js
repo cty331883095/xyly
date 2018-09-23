@@ -18,7 +18,7 @@ export default new Router({
       component: Hooke,
       children: [
         {
-          path: '/',
+          path: '/home',
           component: HookeHome
         },
         {

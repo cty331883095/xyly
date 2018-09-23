@@ -28,7 +28,6 @@ export default {
 
   },
   mounted () {},
-  watch () {},
   methods: {},
   components: {}
 }

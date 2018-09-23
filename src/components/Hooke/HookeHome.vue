@@ -26,7 +26,6 @@ export default {
   props: ['params'],
   computed: {},
   mounted () {},
-  watch () {},
   methods: {},
   components: {
     HomeTopSearchBox,
