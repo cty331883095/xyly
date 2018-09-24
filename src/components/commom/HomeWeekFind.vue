@@ -4,12 +4,16 @@
       <span class="title">发现本周精选</span>
       <span class="commit">我们的精选系列包括最佳插件，动作，特效。所有的这些都是由我们的质量团队精心挑选。</span>
       <div class="imgs">
-        <img :src="'../../../static/square/'+item.src+'.JPG'" v-for="item in imgsdata" :key="item.id" class="item-img" @click=clickHandler(111)>
+        <img :src="'../../../static/square/'+item.src+'.JPG'"
+             v-for="item in imgsdata"
+             :key="item.id"
+             class="item-img"
+             @click=clickHandler(111)>
       </div>
     </div>
-    <div class="button-box">
+    <!-- <div class="button-box">
       <button class="button-style" type="buttom">查看更多特色功能</button>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -57,7 +61,7 @@ export default {
 .wrap {
   width: 100%;
   height: 350px;
-  background: #F4F4F4;
+  background: #f4f4f4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +80,7 @@ export default {
     .commit {
       text-align: center;
       font-size: 16px;
-      color: #B8B8B8;
+      color: #b8b8b8;
       margin-bottom: 10px;
     }
     .imgs {
@@ -93,7 +97,7 @@ export default {
     .button-style {
       width: 170px;
       height: 30px;
-      background: #ACCE22;
+      background: #acce22;
       border-radius: 5px;
       color: #fff;
     }
