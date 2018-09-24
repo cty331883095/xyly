@@ -8,9 +8,9 @@
       <div class="foot-nav">
         <bottom-navigation></bottom-navigation>
       </div>
-    </div >
-   <hooke-login></hooke-login>
-   </div>
+    </div>
+    <hooke-login></hooke-login>
+  </div>
 </template>
 <script>
 import Nav from '@/components/Nav'
@@ -37,10 +37,9 @@ export default {
   position: relative;
   .container {
     .content-box {
-      .foot-nav{
+      .foot-nav {
         width: 100%;
       }
-
     }
   }
 }

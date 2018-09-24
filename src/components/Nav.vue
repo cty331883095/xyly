@@ -1,14 +1,18 @@
 <template>
   <div class="nav-box">
     <div class="title-box">
-      <img src="~@/assets/img/logo.png" class="img-style1">
+      <img src="~@/assets/img/logo.png"
+           class="img-style1">
       <div class="login-style">
-        <img src="~@/assets/img/loginperson.png" class="img-style2" alt="">
-        <span class="txt" @click="loginTo">登陆</span>
+        <img src="~@/assets/img/loginperson.png"
+             class="img-style2"
+             alt="">
+        <span class="txt"
+              @click="loginTo">登陆</span>
       </div>
     </div>
     <div class="switch-box">
-    <hooke-switch></hooke-switch>
+      <hooke-switch></hooke-switch>
     </div>
   </div>
 </template>
@@ -20,7 +24,7 @@ export default {
   data () {
     return {}
   },
-  mounted () {},
+  mounted () { },
   methods: {
     ...mapMutations(['setShowPopwindow']),
     loginTo () {

@@ -1,31 +1,42 @@
 <template>
-<div class="login-box" v-show="ShowPopwindow" >
-  <div class="login-warp">
-    <div class="logo-img-box">
-      <img src="@/assets/img/logo.png" class="logo-img">
-    </div>
-    <div class="login-content-box">
-      <div class="login-content">
+  <div class="login-box"
+       v-show="ShowPopwindow">
+    <div class="login-warp">
+      <div class="logo-img-box">
+        <img src="@/assets/img/logo2.png"
+             class="logo-img">
+      </div>
+      <div class="login-content-box">
+        <div class="login-content">
           <div class="input-item">
             <label for="username">用户名</label>
-            <input type="text" class="item" name="username"/>
+            <input type="text"
+                   class="item"
+                   name="username" />
           </div>
           <div class="input-item">
             <div class="item-title">
               <label for="password">密码</label>
               <a class="forget">忘记密码</a>
             </div>
-            <input type="password" class="item" name="password"/>
+            <input type="password"
+                   class="item"
+                   name="password" />
           </div>
           <div class="button-box">
-            <div><span class="txt1">新来的？</span><span class="txt2">创建一个HookeBox账户</span></div>
-            <button type="button" class="button-style" @click="outlogin">登录到你的账号</button>
+            <div>
+              <span class="txt1">新来的？</span>
+              <span class="txt2">创建一个HookeBox账户</span>
+            </div>
+            <button type="button"
+                    class="button-style"
+                    @click="outlogin">登录到你的账号</button>
           </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 </template>
 <script>
@@ -42,7 +53,7 @@ export default {
   computed: {
     ...mapState(['ShowPopwindow'])
   },
-  mounted () {},
+  mounted () { },
   methods: {
     ...mapMutations(['setShowPopwindow']),
     outlogin () {
@@ -64,7 +75,7 @@ export default {
   .login-warp {
     position: absolute;
     margin: auto;
-    top: 0;
+    top: -48%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -126,28 +137,28 @@ export default {
             font-size: 20px;
           }
         }
-        .button-box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 30px;
+        .button-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 30px;
 
-        .txt1{
-          color: #000;
-        }
-        .txt2{
-           color: #5F8CA8;
-        }
-        .button-style{
-          width: 255px;
-          height: 60px;
-          background: #ACCE22;
-          border-radius: 5px;
-          color: #fff;
-          font-size: 20px;
-          cursor: pointer;
-        }
+          .txt1 {
+            color: #000;
+          }
+          .txt2 {
+            color: #5f8ca8;
+          }
+          .button-style {
+            width: 255px;
+            height: 60px;
+            background: #acce22;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+          }
         }
       }
     }
