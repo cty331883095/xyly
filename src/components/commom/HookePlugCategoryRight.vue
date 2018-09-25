@@ -1,22 +1,39 @@
 <template>
-<div class="right-box">
-   <div class="right-box-top">
-     <div class="content-box">
-       <!-- <img :src="item.src"  class="img-style" :class="{active:item.id===index}" v-for="item in SwitchArr" :key="item.id" @click="clickHandler(item.id)"> -->
-       <div  class="img-style1" :class="{active:1===index}"  @click="clickHandler(1)"></div>
-       <div   class="img-style2" :class="{active:2===index}"  @click="clickHandler(2)"></div>
-     </div>
+  <div class="right-box">
+    <div class="right-box-top">
+      <div class="content-box">
+        <!-- <img :src="item.src"  class="img-style" :class="{active:item.id===index}" v-for="item in SwitchArr" :key="item.id" @click="clickHandler(item.id)"> -->
+        <div class="img-style1"
+             :class="{active:1===index}"
+             @click="clickHandler(1)"></div>
+        <div class="img-style2"
+             :class="{active:2===index}"
+             @click="clickHandler(2)"></div>
+      </div>
 
     </div>
     <div class="right-box-content">
-        <div v-show="index ===1">
-          <category-card-style-one v-for="item in arr" :key="item.id" :params="item.params"></category-card-style-one>
-        </div>
-        <div v-show="index ===2">
-          <category-card-style-two v-for="item in arr2" :key="item.id" :params="item.params"></category-card-style-two>
-          </div>
+      <div v-show="index ===1">
+        <category-card-style-one v-for="item in arr"
+                                 :key="item.id"
+                                 :params="item.params"></category-card-style-one>
+      </div>
+      <div v-show="index ===2">
+        <category-card-style-two v-for="item in arr2"
+                                 :key="item.id"
+                                 :params="item.params"></category-card-style-two>
+      </div>
+      <div class="wrap-box">
+        <el-pagination @size-change="handleSizeChange"
+                       @current-change="handleCurrentChange"
+                       :current-page.sync="currentPage"
+                       :page-size="20"
+                       layout="prev, pager, next, jumper"
+                       :total="1000">
+        </el-pagination>
+      </div>
     </div>
-</div>
+  </div>
 
 </template>
 <script>
@@ -26,6 +43,7 @@ export default {
   name: 'HookePlugCategoryTop',
   data () {
     return {
+      currentPage: 1,
       SwitchArr: [
         { id: 1, src: '/', type: '条状' },
         { id: 2, src: '/', type: '网格' }
@@ -231,10 +249,16 @@ export default {
   },
   props: ['params'],
   computed: {},
-  mounted () {},
+  mounted () { },
   methods: {
     clickHandler (index) {
       this.index = index
+    },
+    handleSizeChange (val) {
+      console.log(`每页 ${val} 条`)
+    },
+    handleCurrentChange (val) {
+      console.log(`当前页: ${val}`)
     }
   },
   components: {
@@ -272,18 +296,18 @@ export default {
         .img-style;
         width: 31px;
         height: 31px;
-        background-image: url('~@/assets/img/icon-1-n.png');
+        background-image: url("~@/assets/img/icon-1-n.png");
         &.active {
-          background-image: url('~@/assets/img/icon-1-H.png');
+          background-image: url("~@/assets/img/icon-1-H.png");
         }
       }
-       .img-style2 {
+      .img-style2 {
         .img-style;
         width: 26px;
         height: 26px;
-        background-image: url('~@/assets/img/icon-2-n.png');
+        background-image: url("~@/assets/img/icon-2-n.png");
         &.active {
-          background-image: url('~@/assets/img/icon-2-h.png');
+          background-image: url("~@/assets/img/icon-2-h.png");
         }
       }
     }
@@ -292,6 +316,12 @@ export default {
     width: 100%;
     height: 100%;
     margin-bottom: 30px;
+    .wrap-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 </style>
