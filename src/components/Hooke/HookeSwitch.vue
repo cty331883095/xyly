@@ -1,9 +1,16 @@
 <template>
-  <ul class="item-ul">
-    <li class="item-li" v-show="!(5===item.id)" v-for="item in switchTitle" :key="item.id" :class="{'yellow':1===item.id,'active':num===item.id}" @click=clickHandler(item.id,item.type)>
-      {{item.name}}
-    </li>
-  </ul>
+  <div class="switch-box">
+    <ul class="item-ul">
+      <li class="item-li"
+          v-show="!(5===item.id)"
+          v-for="item in switchTitle"
+          :key="item.id"
+          :class="{'yellow':1===item.id,'active':num===item.id}"
+          @click=clickHandler(item.id,item.type)>
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
@@ -38,6 +45,16 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.switch-box {
+  padding-left: 100px;
+  width: 100%;
+  background: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
 .item-ul {
   display: flex;
   flex-direction: row;
@@ -50,7 +67,7 @@ export default {
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     &.active::after {
-      content: '';
+      content: "";
       width: 0;
       height: 0;
       width: 0;
@@ -63,14 +80,14 @@ export default {
       left: 35%;
     }
     &.yellow.active::after {
-      content: '';
+      content: "";
       width: 0;
       height: 0;
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 10px solid #ACCE22;
+      border-bottom: 10px solid #acce22;
       position: absolute;
       top: 83%;
       left: 35%;

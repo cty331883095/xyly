@@ -11,13 +11,10 @@
               @click="loginTo">登陆</span>
       </div>
     </div>
-    <div class="switch-box">
-      <hooke-switch></hooke-switch>
-    </div>
   </div>
 </template>
 <script>
-import HookeSwitch from '@/components/Hooke/HookeSwitch'
+
 import { mapMutations } from 'vuex'
 export default {
   name: 'Hooke',
@@ -33,14 +30,13 @@ export default {
     }
   },
   components: {
-    HookeSwitch
   }
 }
 </script>
 <style lang="less" scoped>
 .nav-box {
   width: 100%;
-  height: 150px;
+  height: 75px;
   background: #242424;
   display: flex;
   flex-direction: column;
@@ -70,9 +66,6 @@ export default {
         color: rgba(255, 255, 255, 0.5);
       }
     }
-  }
-  .switch-box {
-    margin-left: 100px;
   }
 }
 </style>
