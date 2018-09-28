@@ -19,11 +19,11 @@ export default {
   data () {
     return {
       switchTitle: [
-        { id: 1, name: '主页', type: 'home' },
-        { id: 2, name: '插件', type: 'plug' },
-        { id: 3, name: '动作', type: 'action' },
-        { id: 4, name: '样式', type: 'style' },
-        { id: 5, name: '详情', type: 'detail' }
+        { id: 1, name: '主页', type: 'hookehome' },
+        { id: 2, name: '插件', type: 'hookeplug' },
+        { id: 3, name: '动作', type: 'hookeaction' },
+        { id: 4, name: '样式', type: 'hookestyle' },
+        { id: 5, name: '详情', type: 'hookedetail' }
       ]
     }
   },
