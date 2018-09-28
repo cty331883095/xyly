@@ -48,7 +48,7 @@ export default {
     ...mapMutations(['setNun']),
     clickHandler (params) {
       this.setNun(5)
-      this.$router.push('/detail/' + params)
+      this.$router.push('/hookedetail/' + params)
     }
   },
   components: {

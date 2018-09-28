@@ -14,10 +14,10 @@
 </template>
 <script>
 import Nav from '@/components/Nav'
-import Home from '@/components/Hooke/Home'
+// import Home from '@/components/Hooke/Home'
 import HookeLogin from '@/components/commom/HookeLogin'
 import BottomNavigation from '@/components/commom/BottomNavigation.vue'
-import HookeSwitch from '@/components/Hooke/HookeSwitch'
+// import HookeSwitch from '@/components/Hooke/HookeSwitch'
 export default {
   name: 'Hooke',
   data () {
@@ -29,10 +29,10 @@ export default {
   methods: {},
   components: {
     Nav,
-    Home,
+    // Home,
     HookeLogin,
-    BottomNavigation,
-    HookeSwitch
+    BottomNavigation
+    // HookeSwitch
   }
 }
 </script>

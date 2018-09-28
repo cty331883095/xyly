@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="register-box">
   {{title}}
 </div>
 
@@ -32,5 +32,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.register-box{
+  color: #000;
+}
 
 </style>

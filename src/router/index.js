@@ -16,7 +16,7 @@ export default new Router({
   mode: 'hash',
   routes: [{
     path: '/',
-    redirect: '/home'
+    redirect: '/hookehome'
   },
   {
     path: '/Hooke',
@@ -30,22 +30,27 @@ export default new Router({
         children: [
           {
             path: '/hookehome',
+            name: 'HookeHome',
             component: HookeHome
           },
           {
             path: '/hookeplug',
+            name: 'HookePlug',
             component: HookePlug
           },
           {
             path: '/hookeaction',
+            name: 'HookeAction',
             component: HookeAction
           },
           {
             path: '/hookestyle',
+            name: 'HookeStyle',
             component: HookeStyle
           },
           {
             path: '/hookedetail/:id',
+            name: 'HookeDetail',
             component: HookeDetail
           }
         ]
