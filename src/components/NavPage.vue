@@ -49,7 +49,8 @@ export default {
     ...mapMutations([
       'setShowPopwindow',
       'setUserName',
-      'setUserPassWord']),
+      'setUserPassWord',
+      'setNun']),
     loginTo () {
       this.setShowPopwindow(true)
     },
@@ -61,6 +62,8 @@ export default {
         this.$message('已登出')
       } else if (command === 'usemanagement') {
         console.log('用户管理')
+        this.setNun(6)
+        this.$router.push('/userspace')
       }
     }
   },

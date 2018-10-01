@@ -19,7 +19,8 @@
               <div class="input-item">
                 <div class="item-title">
                   <label for="password">密码</label>
-                  <a class="forget">忘记密码</a>
+                  <a class="forget"
+                     @click="forgetHandler">忘记密码</a>
                 </div>
                 <input type="password"
                    class="item"
@@ -79,6 +80,9 @@ export default {
       console.log('111')
       this.setShowPopwindow(false)
       this.setShowCreateAccount(true)
+    },
+    forgetHandler () {
+
     }
   },
   components: {}
@@ -146,6 +150,9 @@ export default {
             .forget {
               color: #45738d;
               cursor: pointer;
+              &:hover {
+                color: #acce22;
+              }
             }
           }
 

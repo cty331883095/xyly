@@ -2,7 +2,7 @@
   <div class="switch-box">
     <ul class="item-ul">
       <li class="item-li"
-          v-show="!(5===item.id)"
+          v-show="!(5===item.id) && !(6===item.id) "
           v-for="item in switchTitle"
           :key="item.id"
           :class="{'yellow':1===item.id,'active':num===item.id}"
@@ -23,7 +23,8 @@ export default {
         { id: 2, name: '插件', type: 'hookeplug' },
         { id: 3, name: '动作', type: 'hookeaction' },
         { id: 4, name: '样式', type: 'hookestyle' },
-        { id: 5, name: '详情', type: 'hookedetail' }
+        { id: 5, name: '详情', type: 'hookedetail' },
+        { id: 6, name: '用户管理', type: 'userspace' }
       ]
     }
   },
