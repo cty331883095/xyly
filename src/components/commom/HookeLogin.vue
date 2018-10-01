@@ -1,6 +1,6 @@
 <template>
   <div class="login-box"
-       v-show="ShowPopwindow">
+       v-if="ShowPopwindow">
     <div class="login-warp">
       <div class="logo-img-box">
         <img src="@/assets/img/logo2.png"
@@ -30,11 +30,12 @@
                 <div class="button-box">
                   <div>
                     <span class="txt1">新来的？</span>
-                    <span class="txt2">创建一个HookeBox账户</span>
+                    <span class="txt2"
+                          @click="toCreateAccountPage">创建一个HookeBox账户</span>
                   </div>
                   <button type="button"
                           class="button-style"
-                          @click="outlogin">登录到你的账号</button>
+                          @click="outToLogin">登录到你的账号</button>
                 </div>
 
               </div>
@@ -53,24 +54,31 @@ export default {
       iSshow: false
     }
   },
-  props: ['params'],
   computed: {
-    ...mapState(['ShowPopwindow'])
+    ...mapState(['ShowPopwindow', 'ShowCreateAccount'])
   },
   mounted () { },
   methods: {
     ...mapMutations([
       'setShowPopwindow',
+      'setShowCreateAccount',
       'setUserName',
       'setUserPassWord'
+
     ]),
-    outlogin () {
-      this.setUserName(this.usernametxt)
-      this.setUserPassWord(this.passwordtxt)
-      sessionStorage.setItem('username', this.usernametxt)
+    outToLogin () {
+      this.setUserName(this.usernametxt ? this.usernametxt : '')
+      this.setUserPassWord(this.passwordtxt ? this.passwordtxt : '')
+      sessionStorage.setItem('username', this.usernametxt ? this.usernametxt : '')
       this.setShowPopwindow(false)
+      this.setShowCreateAccount(false)
       this.usernametxt = ''
       this.passwordtxt = ''
+    },
+    toCreateAccountPage () {
+      console.log('111')
+      this.setShowPopwindow(false)
+      this.setShowCreateAccount(true)
     }
   },
   components: {}
@@ -88,8 +96,7 @@ export default {
   .login-warp {
     position: absolute;
     margin: auto;
-    top: -48%;
-    bottom: 0;
+    top: 150px;
     left: 0;
     right: 0;
     width: 840px;
@@ -162,6 +169,10 @@ export default {
           }
           .txt2 {
             color: #5f8ca8;
+            cursor: pointer;
+            &:hover {
+              color: #acce22;
+            }
           }
           .button-style {
             width: 255px;

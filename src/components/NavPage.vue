@@ -39,7 +39,11 @@ export default {
     }
   },
   mounted () {
-    this.setUserName(sessionStorage.getItem('username'))
+    if (sessionStorage.getItem('username') === undefined) {
+      this.setUserName('')
+    } else {
+      this.setUserName(sessionStorage.getItem('username'))
+    }
   },
   methods: {
     ...mapMutations([
@@ -67,12 +71,6 @@ export default {
     },
     loginname () {
       let name = this.UserName
-      // console.log(name)
-      // debugger
-      // if (this.UserName === '') {
-      //   name = sessionStorage.getItem('username')
-      //   console.log(name)
-      // }
       return name
     }
   },

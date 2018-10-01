@@ -13,6 +13,7 @@ const store = new Vuex.Store({
     UserName: '',
     UserPassWord: '',
     ShowPopwindow: false,
+    ShowCreateAccount: false,
     num: 1
   },
   getters: {},
@@ -30,6 +31,9 @@ const store = new Vuex.Store({
     setShowPopwindow (state, type) {
       state.ShowPopwindow = type
     },
+    setShowCreateAccount (state, type) {
+      state.ShowCreateAccount = type
+    },
     setNun (state, num) {
       state.num = num
     },
@@ -39,6 +43,7 @@ const store = new Vuex.Store({
     setUserPassWord (state, password) {
       state.UserPassWord = password
     }
+
   },
   modules: {
     Hooke

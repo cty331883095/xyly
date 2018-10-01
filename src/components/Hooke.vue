@@ -1,21 +1,23 @@
 <template>
   <div class="container-box">
     <div class="container">
-      <Nav></Nav>
+      <nav-page></nav-page>
       <div class="content-box">
-        <router-view/>
+        <router-view />
       </div>
       <div class="foot-nav">
         <bottom-navigation></bottom-navigation>
       </div>
     </div>
     <hooke-login></hooke-login>
+    <hooke-create-account></hooke-create-account>
   </div>
 </template>
 <script>
-import Nav from '@/components/Nav'
+import NavPage from '@/components/NavPage'
 // import Home from '@/components/Hooke/Home'
 import HookeLogin from '@/components/commom/HookeLogin'
+import HookeCreateAccount from '@/components/commom/HookeCreateAccount'
 import BottomNavigation from '@/components/commom/BottomNavigation.vue'
 // import HookeSwitch from '@/components/Hooke/HookeSwitch'
 export default {
@@ -28,10 +30,11 @@ export default {
   },
   methods: {},
   components: {
-    Nav,
+    NavPage,
     // Home,
     HookeLogin,
-    BottomNavigation
+    BottomNavigation,
+    HookeCreateAccount
     // HookeSwitch
   }
 }
