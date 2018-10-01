@@ -2,7 +2,7 @@
   <div class="switch-box">
     <ul class="item-ul">
       <li class="item-li"
-          v-show="!(5===item.id) && !(6===item.id) "
+          v-show="!(5===item.id) && !(6===item.id)"
           v-for="item in switchTitle"
           :key="item.id"
           :class="{'yellow':1===item.id,'active':num===item.id}"

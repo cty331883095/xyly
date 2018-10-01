@@ -8,11 +8,11 @@
              class="img-style2"
              alt="">
         <span class="txt"
-              v-show="!isShow"
+              v-show="isShow"
               @click="loginTo">登陆</span>
         <div>
           <el-dropdown @command="handleCommand"
-                       v-show="isShow">
+                       v-show="!isShow">
             <span class="el-dropdown-link">
               {{loginname}}
             </span>
@@ -70,7 +70,13 @@ export default {
   computed: {
     ...mapState(['UserName', 'UserPassWord']),
     isShow () {
-      return this.loginname !== ''
+      let tmp = true
+      if (this.loginname === '' || this.loginname === null) {
+        tmp = true
+      } else {
+        tmp = false
+      }
+      return tmp
     },
     loginname () {
       let name = this.UserName
