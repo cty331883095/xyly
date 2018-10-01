@@ -19,20 +19,20 @@
                  :src="'./../../../../static/img/ex110.jpg'"
                  alt="这是一张图片">
           </div>
-          <div class="icon-box">
-            <div class="tolike-box"></div>
-            <div class="tocollect-box"></div>
-          </div>
-          <div class="info-card-box">
-            <span class="txt1">Photoshop动作</span>
-            <div class="info-card-warp">
-              <span>3D文字效果套装1</span>
-              <span>16文字样式</span>
-              <span>16完全分层的PSD</span>
-              <span>文本适用于智能对象图层</span>
-              <span>2000x1500像素dpi</span>
-              <span>附加帮助文字和字体链接</span>
-              <!-- <pre class="pre-style">
+            <div class="icon-box">
+              <div class="tolike-box"></div>
+              <div class="tocollect-box"></div>
+            </div>
+            <div class="info-card-box">
+              <span class="txt1">Photoshop动作</span>
+              <div class="info-card-warp">
+                <span>3D文字效果套装1</span>
+                <span>16文字样式</span>
+                <span>16完全分层的PSD</span>
+                <span>文本适用于智能对象图层</span>
+                <span>2000x1500像素dpi</span>
+                <span>附加帮助文字和字体链接</span>
+                <!-- <pre class="pre-style">
               3D文字效果套装1
               16文字样式
               16完全分层的PSD
@@ -40,50 +40,51 @@
               2000x1500像素dpi
               附加帮助文字和字体链接
             </pre> -->
+              </div>
+              <span class="commit-txt">都是用心做的，希望你能喜欢它</span>
             </div>
-            <span class="commit-txt">都是用心做的，希望你能喜欢它</span>
-          </div>
 
-        </div>
-        <div v-show="num===2">评论</div>
-      </div>
-      <div class="detail-box-right">
-        <div class="load-box">
-          <div class="content-txt">
-            <span class="txt1-box">浩克网所有作品均是用户自行上传分享并拥有版权或使用权,仅供网游学习交流，未经上传用户书面授权，请勿作他用。</span>
-            <span class="txt2-box">下载 {{7}}</span>
           </div>
-          <div class="button-box">
-            <div class="button-style"
-                 @click="download">
-              <div class="icon-download"></div>
-              下载</div>
-          </div>
+          <div v-show="num===2">评论</div>
         </div>
-        <div class="author-box">
-          <div class="author-wrap">
-            <img src="/"
+        <div class="detail-box-right">
+          <div class="load-box">
+            <div class="content-txt">
+              <span class="txt1-box">浩克网所有作品均是用户自行上传分享并拥有版权或使用权,仅供网游学习交流，未经上传用户书面授权，请勿作他用。</span>
+              <span class="txt2-box">下载 {{7}}</span>
+            </div>
+            <div class="button-box">
+              <div class="button-style"
+                   @click="download">
+                <div class="icon-download"></div>
+                下载
+              </div>
+            </div>
+          </div>
+          <div class="author-box">
+            <div class="author-wrap">
+              <img src="/"
                  class="img-style"
                  alt="">
-            <div class="author-content">
-              <span class="">作者：{{'Satum62'}}</span>
-              <span class="">作者排名：{{67}}</span>
+              <div class="author-content">
+                <span class="">作者：{{'Satum62'}}</span>
+                <span class="">作者排名：{{67}}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="info-box">
-          <ul class="info-wrap">
-            <li class="info-li"
-                v-for="(item,index) in arrdata"
-                :key="index">
-              <div class="item-one">{{item.title}}</div>
-              <div class="item-two">{{item.content}}</div>
-            </li>
-          </ul>
+          <div class="info-box">
+            <ul class="info-wrap">
+              <li class="info-li"
+                  v-for="(item,index) in arrdata"
+                  :key="index">
+                <div class="item-one">{{item.title}}</div>
+                <div class="item-two">{{item.content}}</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 </template>
 <script>
@@ -113,9 +114,9 @@ export default {
   mounted () { },
   methods: {
     clickHandler (num) {
-      if (num === 2) {
-        return
-      }
+      // if (num === 2) {
+      //   return
+      // }
       this.num = num
     },
     download () {
