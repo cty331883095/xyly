@@ -6,37 +6,41 @@
         <img src="@/assets/img/logo2.png"
              class="logo-img">
       </div>
-      <div class="login-content-box">
-        <div class="login-content">
-          <div class="input-item">
-            <label for="username">用户名</label>
-            <input type="text"
+        <div class="login-content-box">
+          <div class="login-content">
+            <div class="input-item">
+              <label for="username">用户名</label>
+              <input type="text"
                    class="item"
-                   name="username" />
+                   name="username"
+                   v-model="usernametxt"
+                   />
           </div>
-          <div class="input-item">
-            <div class="item-title">
-              <label for="password">密码</label>
-              <a class="forget">忘记密码</a>
-            </div>
-            <input type="password"
+              <div class="input-item">
+                <div class="item-title">
+                  <label for="password">密码</label>
+                  <a class="forget">忘记密码</a>
+                </div>
+                <input type="password"
                    class="item"
-                   name="password" />
+                   name="password"
+                   v-model="passwordtxt"
+                   />
           </div>
-          <div class="button-box">
-            <div>
-              <span class="txt1">新来的？</span>
-              <span class="txt2">创建一个HookeBox账户</span>
-            </div>
-            <button type="button"
-                    class="button-style"
-                    @click="outlogin">登录到你的账号</button>
-          </div>
+                <div class="button-box">
+                  <div>
+                    <span class="txt1">新来的？</span>
+                    <span class="txt2">创建一个HookeBox账户</span>
+                  </div>
+                  <button type="button"
+                          class="button-style"
+                          @click="outlogin">登录到你的账号</button>
+                </div>
 
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
 </template>
 <script>
@@ -55,9 +59,18 @@ export default {
   },
   mounted () { },
   methods: {
-    ...mapMutations(['setShowPopwindow']),
+    ...mapMutations([
+      'setShowPopwindow',
+      'setUserName',
+      'setUserPassWord'
+    ]),
     outlogin () {
+      this.setUserName(this.usernametxt)
+      this.setUserPassWord(this.passwordtxt)
+      sessionStorage.setItem('username', this.usernametxt)
       this.setShowPopwindow(false)
+      this.usernametxt = ''
+      this.passwordtxt = ''
     }
   },
   components: {}

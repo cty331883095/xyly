@@ -11,6 +11,7 @@ const store = new Vuex.Store({
     clientHeight: 1080,
     url: '',
     UserName: '',
+    UserPassWord: '',
     ShowPopwindow: false,
     num: 1
   },
@@ -31,8 +32,13 @@ const store = new Vuex.Store({
     },
     setNun (state, num) {
       state.num = num
+    },
+    setUserName (state, name) {
+      state.UserName = name
+    },
+    setUserPassWord (state, password) {
+      state.UserPassWord = password
     }
-
   },
   modules: {
     Hooke

@@ -8,28 +8,76 @@
              class="img-style2"
              alt="">
         <span class="txt"
+              v-show="!isShow"
               @click="loginTo">登陆</span>
+        <div>
+          <el-dropdown @command="handleCommand"
+                       v-show="isShow">
+            <span class="el-dropdown-link">
+              {{loginname}}
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item disabled
+                                class="title-wrap">hi,{{loginname}}</el-dropdown-item>
+              <el-dropdown-item divided
+                                command="usemanagement">用户管理</el-dropdown-item>
+              <el-dropdown-item command="loginout">登出</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'Hooke',
   data () {
-    return {}
+    return {
+    }
   },
-  mounted () { },
+  mounted () {
+    this.setUserName(sessionStorage.getItem('username'))
+  },
   methods: {
-    ...mapMutations(['setShowPopwindow']),
+    ...mapMutations([
+      'setShowPopwindow',
+      'setUserName',
+      'setUserPassWord']),
     loginTo () {
-      console.log('登录成功')
       this.setShowPopwindow(true)
+    },
+    handleCommand (command) {
+      if (command === 'loginout') {
+        this.setUserName('')
+        this.setUserPassWord('')
+        sessionStorage.setItem('username', '')
+        this.$message('已登出')
+      } else if (command === 'usemanagement') {
+        console.log('用户管理')
+      }
+    }
+  },
+  computed: {
+    ...mapState(['UserName', 'UserPassWord']),
+    isShow () {
+      return this.loginname !== ''
+    },
+    loginname () {
+      let name = this.UserName
+      // console.log(name)
+      // debugger
+      // if (this.UserName === '') {
+      //   name = sessionStorage.getItem('username')
+      //   console.log(name)
+      // }
+      return name
     }
   },
   components: {
+
   }
 }
 </script>
@@ -67,5 +115,14 @@ export default {
       }
     }
   }
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #ababab;
+  font-size: 20px;
+}
+.title-wrap {
+  font-size: 18px;
+  color: #000;
 }
 </style>
