@@ -2,6 +2,8 @@
   <div class="login-box"
        v-if="ShowPopwindow">
     <div class="login-warp">
+      <div class="close"
+           @click="closeHandler">X</div>
       <div class="logo-img-box">
         <img src="@/assets/img/logo2.png"
              class="logo-img">
@@ -19,8 +21,8 @@
               <div class="input-item">
                 <div class="item-title">
                   <label for="password">密码</label>
-                  <a class="forget"
-                     @click="forgetHandler">忘记密码</a>
+                  <span class="forget"
+                        @click="forgetHandler">忘记密码</span>
                 </div>
                 <input type="password"
                    class="item"
@@ -75,14 +77,20 @@ export default {
       this.setShowCreateAccount(false)
       this.usernametxt = ''
       this.passwordtxt = ''
+      this.$router.push('/')
     },
     toCreateAccountPage () {
       console.log('111')
       this.setShowPopwindow(false)
-      this.setShowCreateAccount(true)
+      // this.setShowCreateAccount(true)
+      this.$router.push('/hookeregister')
     },
     forgetHandler () {
-
+      this.setShowPopwindow(false)
+      this.$router.push('/hookeforget')
+    },
+    closeHandler () {
+      this.setShowPopwindow(false)
     }
   },
   components: {}
@@ -96,7 +104,7 @@ export default {
   background: rgba(139, 139, 139, 0.9);
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000;
   .login-warp {
     position: absolute;
     margin: auto;
@@ -108,6 +116,19 @@ export default {
     border-radius: 5px;
     overflow: hidden;
     z-index: 1001;
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      z-index: 100001;
+      cursor: pointer;
+      &:hover {
+        color: #45649e;
+      }
+    }
     .logo-img-box {
       width: 100%;
       height: 120px;

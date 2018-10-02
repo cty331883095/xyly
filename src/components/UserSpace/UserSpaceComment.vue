@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <user-space-comment-purchaser></user-space-comment-purchaser>
     <user-space-comment-author></user-space-comment-author>
     <user-space-comment-answer></user-space-comment-answer>
@@ -33,10 +33,12 @@ export default {
     UserSpaceCommentAnswer,
     UserSpaceCommentAuthor,
     UserSpaceCommentPurchaser
-
   }
 
 }
 </script>
 <style lang="less" scoped>
+.box {
+  margin-bottom: 20px;
+}
 </style>

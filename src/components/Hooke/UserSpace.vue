@@ -4,7 +4,7 @@
       <div class="user-img-box">
         <img src="@/assets/img/box-98x98.png" class="img-style">
         <div class="content-box">
-          <span class="txt1">s9989</span>
+          <span class="txt1">{{loginname}}</span>
           <span class="txt2">中国，成员自2018年8月</span>
         </div>
       </div>
@@ -30,6 +30,7 @@
 import UserSpaceDwon from '@/components/UserSpace/UserSpaceDwon'
 import UserSpaceCollection from '@/components/UserSpace/UserSpaceCollection'
 import UserSpaceComment from '@/components/UserSpace/UserSpaceComment'
+import { mapState } from 'vuex'
 export default {
   name: 'UserSpace',
   data () {
@@ -45,6 +46,11 @@ export default {
   },
   props: ['params'],
   computed: {
+    ...mapState(['UserName', 'UserPassWord']),
+    loginname () {
+      let name = this.UserName
+      return name
+    }
 
   },
   mounted () {

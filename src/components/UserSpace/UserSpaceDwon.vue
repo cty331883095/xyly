@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <user-space-card v-for="item in arr"
                      :key="item.id"
                      :params="item.params"></user-space-card>
@@ -61,4 +61,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.box {
+  margin-bottom: 20px;
+}
 </style>

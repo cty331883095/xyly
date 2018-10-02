@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <user-space-card v-for="(item,index) in arr"
                      :key="index"
                      :params="item.params">
@@ -84,6 +84,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.box {
+  margin-bottom: 20px;
+}
 .collection-icon {
   margin: 50px 0 0 0;
   width: 24px;

@@ -10,16 +10,14 @@
       </div>
     </div>
     <hooke-login></hooke-login>
-    <hooke-create-account></hooke-create-account>
+    <!-- <hooke-create-account></hooke-create-account> -->
   </div>
 </template>
 <script>
 import NavPage from '@/components/NavPage'
-// import Home from '@/components/Hooke/Home'
 import HookeLogin from '@/components/commom/HookeLogin'
 import HookeCreateAccount from '@/components/commom/HookeCreateAccount'
 import BottomNavigation from '@/components/commom/BottomNavigation.vue'
-// import HookeSwitch from '@/components/Hooke/HookeSwitch'
 export default {
   name: 'Hooke',
   data () {
@@ -31,11 +29,9 @@ export default {
   methods: {},
   components: {
     NavPage,
-    // Home,
     HookeLogin,
     BottomNavigation,
     HookeCreateAccount
-    // HookeSwitch
   }
 }
 </script>
