@@ -1,8 +1,8 @@
 <template>
   <div class="create-account-box">
     <div class="create-account-wrap">
-      <!-- <div class="close"
-           @click="closeHandler">x</div> -->
+      <div class="close"
+           @click="closeHandler">x</div>
       <div>
         <div class="title-box">
           创建账号
@@ -69,7 +69,8 @@ export default {
       'setShowCreateAccount'
     ]),
     closeHandler () {
-      this.setShowCreateAccount(false)
+      // this.setShowCreateAccount(false)
+      this.$router.push('/')
     },
     createHandler () {
       console.log('创建账号')
@@ -95,6 +96,7 @@ export default {
   justify-content: center;
   align-items: center;
   .create-account-wrap {
+    position: relative;
     width: 514px;
     height: 585px;
     border-radius: 5px;
@@ -106,6 +108,17 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    .close {
+      position: absolute;
+      font-size: 25px;
+      right: 11px;
+      top: -4px;
+      color: #000;
+      cursor: pointer;
+      &:hover {
+        color: #45649e;
+      }
+    }
     .title-box {
       font-size: 30px;
       font-weight: 600;

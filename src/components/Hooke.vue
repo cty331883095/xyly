@@ -24,7 +24,7 @@ export default {
     return {}
   },
   mounted () {
-    // this.$router.push('/home')
+    this.$router.push('/')
   },
   methods: {},
   components: {

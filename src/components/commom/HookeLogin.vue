@@ -91,6 +91,7 @@ export default {
     },
     closeHandler () {
       this.setShowPopwindow(false)
+      this.$router.push('/')
     }
   },
   components: {}
