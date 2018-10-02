@@ -7,6 +7,12 @@
            :class="{active:item.active}"
            @click="clickHandler(index)"></div>
     </user-space-card>
+    <div class="pagination-box">
+      <el-pagination background
+                     layout="prev, pager, next"
+                     :total="20">
+      </el-pagination>
+    </div>
   </div>
 
 </template>
@@ -98,5 +104,14 @@ export default {
   &.active {
     background-image: url("~@/assets/img/collectionH.png");
   }
+}
+.pagination-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
 }
 </style>

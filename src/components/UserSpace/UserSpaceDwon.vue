@@ -3,6 +3,12 @@
     <user-space-card v-for="item in arr"
                      :key="item.id"
                      :params="item.params"></user-space-card>
+    <div class="pagination-box">
+      <el-pagination background
+                     layout="prev, pager, next"
+                     :total="20">
+      </el-pagination>
+    </div>
   </div>
 
 </template>
@@ -63,5 +69,14 @@ export default {
 <style lang="less" scoped>
 .box {
   margin-bottom: 20px;
+}
+.pagination-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
 }
 </style>
