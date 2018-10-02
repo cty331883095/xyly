@@ -136,16 +136,10 @@ export default {
       this.num = num
     },
     likeHandler () {
-      if (this.templike === true) {
-        return
-      }
-      this.templike = true
+      this.templike = !this.templike
     },
     collectHandler () {
-      if (this.tempcollect === true) {
-        return
-      }
-      this.tempcollect = true
+      this.tempcollect = !this.tempcollect
     },
     download () {
       console.log('下载')

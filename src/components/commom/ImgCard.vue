@@ -35,17 +35,11 @@ export default {
     },
     likeHandler () {
       console.log('like')
-      if (this.templike === true) {
-        return
-      }
-      this.templike = true
+      this.templike = !this.templike
     },
     collectHandler () {
       console.log('collect')
-      if (this.tempcollect === true) {
-        return
-      }
-      this.tempcollect = true
+      this.tempcollect = !this.tempcollect
     },
     downloadHandler () {
       console.log('download')
