@@ -144,7 +144,7 @@ export default {
     padding: 0 200px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     .detail-title {
       margin-top: 15px;
@@ -174,11 +174,12 @@ export default {
     padding: 0 200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     .detail-box-left {
       width: 1000px;
       margin-bottom: 30px;
+      margin-right: 30px;
 
       .warp-box-one {
         width: 100%;
