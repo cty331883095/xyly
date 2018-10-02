@@ -4,7 +4,7 @@
       <div class="user-img-box">
         <div class="user-content-box">
           <img src="@/assets/img/box-98x98.png" class="img-style">
-          <span class="txt">点击文字编辑图像</span>
+          <span class="txt">点击编辑图像</span>
         </div>
         <div class="content-box">
           <div class="content-in">
@@ -103,7 +103,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
 
         .img-style {
           width: 98px;

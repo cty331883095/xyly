@@ -20,8 +20,18 @@
                  alt="这是一张图片">
           </div>
             <div class="icon-box">
-              <div class="tolike-box"></div>
-              <div class="tocollect-box"></div>
+              <div class="tolike-box"
+                   @click="likeHandler">
+                <div class="icon-wrap"
+                     :class="{active:templike}"></div>
+                <div class="txt">喜欢</div>
+              </div>
+              <div class="tocollect-box"
+                   @click="collectHandler">
+                <div class="icon-wrap"
+                     :class="{active:tempcollect}"></div>
+                <div class="txt">收藏</div>
+              </div>
             </div>
             <div class="info-card-box">
               <span class="txt1">Photoshop动作</span>
@@ -97,6 +107,8 @@ export default {
   data () {
     return {
       num: 1,
+      templike: false,
+      tempcollect: false,
       arr: [
         { id: 1, name: '项目细节', type: '' },
         { id: 2, name: '评论', type: '' }
@@ -122,6 +134,18 @@ export default {
       //   return
       // }
       this.num = num
+    },
+    likeHandler () {
+      if (this.templike === true) {
+        return
+      }
+      this.templike = true
+    },
+    collectHandler () {
+      if (this.tempcollect === true) {
+        return
+      }
+      this.tempcollect = true
     },
     download () {
       console.log('下载')
@@ -198,18 +222,54 @@ export default {
           justify-content: space-around;
           align-items: center;
           .tolike-box {
-            width: 253px;
+            // width: 253px;
             height: 55px;
-            background-image: url("~@/assets/img/tolike.png");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+            cursor: pointer;
+            background: #f4f4f4;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 30px;
+            .icon-wrap {
+              width: 26px;
+              height: 26px;
+              background-image: url("~@/assets/img/like-n.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              margin-right: 5px;
+              &.active {
+                background-image: url("~@/assets/img/like-h.png");
+              }
+            }
+            .txt {
+            }
           }
           .tocollect-box {
-            width: 253px;
+            // width: 253px;
             height: 55px;
-            background-image: url("~@/assets/img/tocollect.png");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+            padding: 0 30px;
+            cursor: pointer;
+            background: #f4f4f4;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .icon-wrap {
+              width: 26px;
+              height: 26px;
+              margin-right: 5px;
+              background-image: url("~@/assets/img/c-n.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              &.active {
+                background-image: url("~@/assets/img/c-h.png");
+              }
+            }
+            .txt {
+            }
           }
         }
         .info-card-box {
