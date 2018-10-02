@@ -45,7 +45,9 @@
             </div>
 
           </div>
-          <div v-show="num===2">评论</div>
+          <div v-show="num===2">
+            <hooke-comment></hooke-comment>
+          </div>
         </div>
         <div class="detail-box-right">
           <div class="load-box">
@@ -88,6 +90,8 @@
 
 </template>
 <script>
+import HookeComment from '@/components/Hooke/HookeComment'
+
 export default {
   name: 'HookeDetail',
   data () {
@@ -123,7 +127,7 @@ export default {
       console.log('下载')
     }
   },
-  components: {}
+  components: { HookeComment }
 }
 </script>
 <style lang="less" scoped>
