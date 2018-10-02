@@ -1,24 +1,26 @@
 <template>
-<div class="wrap">
-  <div class="img-box">
-   <img-card :params="params.imgsrc"></img-card>
-    <div class="content-txt-box">
-      <span class="txt1">{{params.title1}}</span>
+  <div class="wrap">
+    <div class="img-box">
+      <img-card :params="params.imgsrc"></img-card>
+      <div class="content-txt-box">
+        <span class="txt1"
+              @click=clickHandler(118)>{{params.title1}}</span>
         <span class="txt2">{{params.title2}}</span>
+      </div>
+    </div>
+    <div class="introduce-box">
+      <span>{{params.txt1}}</span>
+      <span>{{params.txt2}}</span>
+    </div>
+    <div class="downtxt-box">
+      <span>下载{{params.value}}</span>
     </div>
   </div>
-  <div class="introduce-box">
-    <span>{{params.txt1}}</span>
-    <span>{{params.txt2}}</span>
-  </div>
-  <div class="downtxt-box">
-    <span>下载{{params.value}}</span>
-  </div>
-</div>
 
 </template>
 <script>
 import ImgCard from '@/components/commom/ImgCard.vue'
+import { mapMutations } from 'vuex'
 export default {
   name: 'CategoryCardStyleOne',
   data () {
@@ -43,8 +45,13 @@ export default {
     }
   },
   computed: {},
-  mounted () {},
+  mounted () { },
   methods: {
+    ...mapMutations(['setNun']),
+    clickHandler (params) {
+      this.setNun(5)
+      this.$router.push('/hookedetail/' + params)
+    }
   },
   components: {
     ImgCard
@@ -69,36 +76,36 @@ export default {
     display: flex;
     flex-direction: row;
 
-      .content-txt-box {
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-        .txt1 {
-          font-size: 25xp;
-          color: #332c2b;
-        }
-        .txt2 {
-          font-size: 16px;
-          color: #19418c;
-        }
-      }
-    }
-    .introduce-box {
-      font-size: 16px;
-      color: #8b8b8c;
-      width: 350px;
-      height: 150px;
+    .content-txt-box {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-    .downtxt-box {
-      width: 120px;
-      height: 150px;
-      font-size: 25px;
-      color: #332c2b;
+      margin-left: 20px;
+      .txt1 {
+        font-size: 25xp;
+        color: #332c2b;
+        cursor: pointer;
+      }
+      .txt2 {
+        font-size: 16px;
+        color: #19418c;
+      }
     }
   }
-
+  .introduce-box {
+    font-size: 16px;
+    color: #8b8b8c;
+    width: 350px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .downtxt-box {
+    width: 120px;
+    height: 150px;
+    font-size: 25px;
+    color: #332c2b;
+  }
+}
 </style>

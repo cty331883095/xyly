@@ -1,16 +1,20 @@
 <template>
-<div class="wrap">
-  <div class="card-box" v-for="(item,index) in params" :key="index">
-    <img-card :params="item.imgsrc"></img-card>
-    <span class="txt1">{{item.str}}</span>
-    <span class="txt2">下载{{item.value}}</span>
-  </div>
+  <div class="wrap">
+    <div class="card-box"
+         v-for="(item,index) in params"
+         :key="index">
+      <img-card :params="item.imgsrc"></img-card>
+      <span class="txt1"
+            @click=clickHandler(118)>{{item.str}}</span>
+      <span class="txt2">下载{{item.value}}</span>
+    </div>
 
-</div>
+  </div>
 
 </template>
 <script>
 import ImgCard from '@/components/commom/ImgCard.vue'
+import { mapMutations } from 'vuex'
 export default {
   name: 'CategoryCardStyleTwo',
   data () {
@@ -26,6 +30,11 @@ export default {
 
   },
   methods: {
+    ...mapMutations(['setNun']),
+    clickHandler (params) {
+      this.setNun(5)
+      this.$router.push('/hookedetail/' + params)
+    }
 
   },
   components: {
@@ -46,17 +55,18 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  .card-box{
-     display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 16px;
-  .txt2{
-    color: #BCBCBC;
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    .txt1 {
+      cursor: pointer;
+    }
+    .txt2 {
+      color: #bcbcbc;
+    }
   }
-
-  }
-  }
-
+}
 </style>

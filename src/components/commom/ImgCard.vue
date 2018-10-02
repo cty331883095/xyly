@@ -1,12 +1,15 @@
 <template>
   <div class="box-wrap">
-      <img :src="params"  class="img-style" @click=clickHandler(118)>
-      <div class="bottom-box">
-        <div class="like" @click="likeHandler"></div>
-        <div class="collect" @click="collectHandler"></div>
-        <div class="download" @click="downloadHandler"></div>
-      </div>
+    <img :src="params"  class="img-style" @click=clickHandler(118)>
+    <div class="bottom-box">
+      <div class="like"
+           @click="likeHandler"></div>
+      <div class="collect"
+           @click="collectHandler"></div>
+      <div class="download"
+           @click="downloadHandler"></div>
     </div>
+  </div>
 </template>
 <script>
 import { mapMutations } from 'vuex'
@@ -19,7 +22,7 @@ export default {
   },
   props: ['params'],
   computed: {},
-  mounted () {},
+  mounted () { },
   methods: {
     ...mapMutations(['setNun']),
     clickHandler (params) {
@@ -50,6 +53,7 @@ export default {
   .img-style {
     width: 100px;
     height: 100px;
+    cursor: pointer;
   }
   .bottom-box {
     width: 100%;
