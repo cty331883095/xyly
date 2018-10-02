@@ -65,7 +65,7 @@
           </div>
           <div class="author-box">
             <div class="author-wrap">
-              <img src="/"
+              <img src="@/assets/img/box-50x50.png"
                  class="img-style"
                  alt="">
               <div class="author-content">

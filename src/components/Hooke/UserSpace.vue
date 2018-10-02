@@ -2,9 +2,14 @@
   <div class="user-space-box">
     <div class="top-box">
       <div class="user-img-box">
-        <img src="@/assets/img/box-98x98.png" class="img-style">
+        <div class="user-content-box">
+          <img src="@/assets/img/box-98x98.png" class="img-style">
+          <span class="txt">点击文字编辑图像</span>
+        </div>
         <div class="content-box">
-          <span class="txt1">{{loginname}}</span>
+          <div class="content-in">
+            <span class="txt1">{{loginname}}</span> <i class="el-icon-edit"></i>
+          </div>
           <span class="txt2">中国，成员自2018年8月</span>
         </div>
       </div>
@@ -94,24 +99,44 @@ export default {
       justify-content: flex-start;
       align-items: center;
       padding: 30px 200px;
-      .img-style {
-        width: 98px;
-        height: 98px;
+      .user-content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .img-style {
+          width: 98px;
+          height: 98px;
+        }
+        .txt {
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 5px;
+          color: #8b8b8c;
+        }
       }
+
       .content-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         padding-left: 30px;
-        .txt1 {
-          font-size: 25px;
-          color: #332c2b;
-        }
-        .txt2 {
-          font-size: 16px;
-          color: #8b8b8c;
-          border-radius: 5px;
+        .content-in {
+          .el-icon-edit {
+            cursor: pointer;
+            margin-left: 5px;
+          }
+          .txt1 {
+            font-size: 25px;
+            color: #332c2b;
+          }
+          .txt2 {
+            font-size: 16px;
+            color: #8b8b8c;
+            border-radius: 5px;
+          }
         }
       }
     }
@@ -139,6 +164,7 @@ export default {
   }
   .bottom-box {
     width: 80%;
+    min-height: 800px;
     margin: 10px 200px 0 200px;
   }
 }

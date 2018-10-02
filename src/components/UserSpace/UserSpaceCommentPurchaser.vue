@@ -8,13 +8,17 @@
       </div>
       <div class="icon-box">
         <span>大约3天前</span>
-        <i class="el-icon-delete"></i>
-        <i class="el-icon-edit"></i>
+        <i class="el-icon-delete"
+           v-if="isshow"></i>
+        <i class="el-icon-edit"
+           v-if="isshow"></i>
 
       </div>
     </div>
     <div class="content-box">
       <span>它不起作用，我买了地图册并尝试再cs6中安装它，没有任何反应</span>
+      <span class="txt2"
+            v-if="isshow">点击查看原评论</span>
     </div>
   </div>
 </template>
@@ -26,7 +30,21 @@ export default {
       title: 'UserSpaceCommentPurchaser'
     }
   },
-  props: ['params'],
+  // props: ['params', 'isshow'],
+  props: {
+    params: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    isshow: {
+      type: Boolean,
+      default () {
+        return true
+      }
+    }
+  },
   computed: {
 
   },
@@ -97,7 +115,15 @@ export default {
     }
   }
   .content-box {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .txt2 {
+      font-size: 16px;
+      color: #3a517d;
+    }
   }
 }
 </style>

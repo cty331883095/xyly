@@ -2,7 +2,7 @@
   <div class="nav-box">
     <div class="title-box">
       <img src="~@/assets/img/logo.png"
-           class="img-style1">
+           class="img-style1" @click="jump">
       <div class="login-style">
         <img src="~@/assets/img/loginperson.png"
              class="img-style2"
@@ -65,6 +65,10 @@ export default {
         this.setNun(6)
         this.$router.push('/userspace')
       }
+    },
+    jump () {
+      this.setNun(1)
+      this.$router.push('/')
     }
   },
   computed: {
@@ -105,6 +109,7 @@ export default {
     align-items: center;
     .img-style1 {
       margin-left: 100px;
+      cursor: pointer;
     }
     .login-style {
       margin-right: 100px;

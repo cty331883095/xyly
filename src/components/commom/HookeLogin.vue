@@ -66,8 +66,8 @@ export default {
       'setShowPopwindow',
       'setShowCreateAccount',
       'setUserName',
-      'setUserPassWord'
-
+      'setUserPassWord',
+      'setNun'
     ]),
     outToLogin () {
       this.setUserName(this.usernametxt ? this.usernametxt : '')
@@ -77,6 +77,7 @@ export default {
       this.setShowCreateAccount(false)
       this.usernametxt = ''
       this.passwordtxt = ''
+      this.setNun(1)
       this.$router.push('/')
     },
     toCreateAccountPage () {
@@ -91,6 +92,7 @@ export default {
     },
     closeHandler () {
       this.setShowPopwindow(false)
+      this.setNun(1)
       this.$router.push('/')
     }
   },

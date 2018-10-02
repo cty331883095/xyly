@@ -66,10 +66,12 @@ export default {
   methods: {
     ...mapMutations([
       'setShowPopwindow',
-      'setShowCreateAccount'
+      'setShowCreateAccount',
+      'setNun'
     ]),
     closeHandler () {
       // this.setShowCreateAccount(false)
+      this.setNun(1)
       this.$router.push('/')
     },
     createHandler () {
