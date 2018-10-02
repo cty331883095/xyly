@@ -5,8 +5,7 @@
            class="img-style1" @click="jump">
       <div class="login-style">
         <img src="~@/assets/img/loginperson.png"
-             class="img-style2"
-             alt="">
+             class="img-style2">
         <span class="txt"
               v-show="isShow"
               @click="loginTo">登陆</span>
@@ -119,6 +118,8 @@ export default {
       align-items: center;
       .img-style2 {
         margin-right: 5px;
+        width: 25px;
+        height: 25px;
       }
       .txt {
         font-size: 25px;

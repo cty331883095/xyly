@@ -132,11 +132,11 @@ export default {
             font-size: 25px;
             color: #332c2b;
           }
-          .txt2 {
-            font-size: 16px;
-            color: #8b8b8c;
-            border-radius: 5px;
-          }
+        }
+        .txt2 {
+          font-size: 16px;
+          color: #8b8b8c;
+          border-radius: 5px;
         }
       }
     }
