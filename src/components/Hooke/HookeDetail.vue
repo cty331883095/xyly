@@ -238,12 +238,13 @@ export default {
               background-image: url("~@/assets/img/like-n.png");
               background-repeat: no-repeat;
               background-size: 100% 100%;
-              margin-right: 5px;
+              margin-right: 10px;
               &.active {
                 background-image: url("~@/assets/img/like-h.png");
               }
             }
             .txt {
+              color: #595d60;
             }
           }
           .tocollect-box {
@@ -260,7 +261,7 @@ export default {
             .icon-wrap {
               width: 26px;
               height: 26px;
-              margin-right: 5px;
+              margin-right: 10px;
               background-image: url("~@/assets/img/c-n.png");
               background-repeat: no-repeat;
               background-size: 100% 100%;
@@ -269,6 +270,7 @@ export default {
               }
             }
             .txt {
+              color: #595d60;
             }
           }
         }

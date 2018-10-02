@@ -18,7 +18,7 @@
     <div class="content-box">
       <span>它不起作用，我买了地图册并尝试再cs6中安装它，没有任何反应</span>
       <span class="txt2"
-            v-if="isshow">点击查看原评论</span>
+            v-if="iscommit">点击查看原评论</span>
     </div>
   </div>
 </template>
@@ -39,6 +39,12 @@ export default {
       }
     },
     isshow: {
+      type: Boolean,
+      default () {
+        return true
+      }
+    },
+    iscommit: {
       type: Boolean,
       default () {
         return true

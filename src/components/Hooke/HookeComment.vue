@@ -1,17 +1,20 @@
 <template>
   <div class="box">
     <div class="item-box">
-      <user-space-comment-purchaser :isshow="false"></user-space-comment-purchaser>
+      <user-space-comment-purchaser :isshow="false"
+                                    :iscommit="false"></user-space-comment-purchaser>
       <user-space-comment-author></user-space-comment-author>
     </div>
     <div class="item-box">
-      <user-space-comment-purchaser :isshow="false"></user-space-comment-purchaser>
+      <user-space-comment-purchaser :isshow="false"
+                                    :iscommit="false"></user-space-comment-purchaser>
       <user-space-comment-author></user-space-comment-author>
     </div>
     <div class="item-box">
-      <user-space-comment-purchaser :isshow="false"></user-space-comment-purchaser>
+      <user-space-comment-purchaser :iscommit="false"></user-space-comment-purchaser>
       <user-space-comment-author></user-space-comment-author>
-      <user-space-comment-purchaser :isshow="false"></user-space-comment-purchaser>
+      <user-space-comment-purchaser :isshow="false"
+                                    :iscommit="false"></user-space-comment-purchaser>
       <user-space-comment-answer></user-space-comment-answer>
     </div>
     <div class="pagination-box">

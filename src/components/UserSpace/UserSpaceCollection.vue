@@ -40,7 +40,7 @@ export default {
         {
           id: 2,
           name: 'str',
-          active: false,
+          active: true,
           params: {
             imgsrc: '../../../static/img/ex.png',
             title1: '达盖尔印版照片-photoshop动作',
@@ -53,7 +53,7 @@ export default {
         {
           id: 3,
           name: 'str',
-          active: false,
+          active: true,
           params: {
             imgsrc: '../../../static/img/ex.png',
             title1: '达盖尔印版照片-photoshop动作',

@@ -3,8 +3,10 @@
     <img :src="params"  class="img-style" @click=clickHandler(118)>
     <div class="bottom-box">
       <div class="like"
+           :class="{active:templike}"
            @click="likeHandler"></div>
       <div class="collect"
+           :class="{active:tempcollect}"
            @click="collectHandler"></div>
       <div class="download"
            @click="downloadHandler"></div>
@@ -17,7 +19,9 @@ export default {
   name: 'ImgCard',
   data () {
     return {
-      title: 'templet'
+      title: 'templet',
+      templike: false,
+      tempcollect: false
     }
   },
   props: ['params'],
@@ -31,9 +35,17 @@ export default {
     },
     likeHandler () {
       console.log('like')
+      if (this.templike === true) {
+        return
+      }
+      this.templike = true
     },
     collectHandler () {
       console.log('collect')
+      if (this.tempcollect === true) {
+        return
+      }
+      this.tempcollect = true
     },
     downloadHandler () {
       console.log('download')
@@ -65,23 +77,29 @@ export default {
     background: #fefefe;
     margin: 10px 0;
     .styel {
-      width: 21px;
-      height: 21px;
+      width: 22px;
+      height: 22px;
       background-repeat: no-repeat;
       background-size: 100% 100%;
       cursor: pointer;
     }
     .like {
       .styel;
-      background-image: url("~@/assets/img/like.png");
+      background-image: url("~@/assets/img/likesamll-n.png");
+      &.active {
+        background-image: url("~@/assets/img/likesmall-h.png");
+      }
     }
     .collect {
       .styel;
-      background-image: url("~@/assets/img/collect.png");
+      background-image: url("~@/assets/img/Colect-n.png");
+      &.active {
+        background-image: url("~@/assets/img/Colect-h.png");
+      }
     }
     .download {
       .styel;
-      background-image: url("~@/assets/img/download.png");
+      background-image: url("~@/assets/img/dwon.png");
     }
   }
 }
