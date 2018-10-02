@@ -13,6 +13,7 @@ import UserSpace from '@/components/Hooke/UserSpace'
 import HookeForget from '@/components/Hooke/HookeForget'
 import HookeRevisePsw from '@/components/Hooke/HookeRevisePsw'
 import HookeRegisterSuccess from '@/components/Hooke/HookeRegisterSuccess'
+import HookeChangePsw from '@/components/Hooke/HookeChangePsw'
 
 Vue.use(Router)
 
@@ -82,6 +83,11 @@ export default new Router({
       path: '/hookerevisepsw',
       name: 'HookeRevisePsw',
       component: HookeRevisePsw
+    },
+    {
+      path: '/HookeChangePsw',
+      name: 'HookeChangePsw',
+      component: HookeChangePsw
     }
     ]
   }
