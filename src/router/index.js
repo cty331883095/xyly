@@ -14,6 +14,9 @@ import HookeForget from '@/components/Hooke/HookeForget'
 import HookeRevisePsw from '@/components/Hooke/HookeRevisePsw'
 import HookeRegisterSuccess from '@/components/Hooke/HookeRegisterSuccess'
 import HookeChangePsw from '@/components/Hooke/HookeChangePsw'
+import HookeAbout from '@/components/HookeAbout'
+import HookeProtocol from '@/components/HookeProtocol'
+import HookeLegal from '@/components/HookeLegal'
 
 Vue.use(Router)
 
@@ -88,6 +91,21 @@ export default new Router({
       path: '/HookeChangePsw',
       name: 'HookeChangePsw',
       component: HookeChangePsw
+    },
+    {
+      path: '/about',
+      name: 'HookeAbout',
+      component: HookeAbout
+    },
+    {
+      path: '/protocol',
+      name: 'HookeProtocol',
+      component: HookeProtocol
+    },
+    {
+      path: '/legal',
+      name: 'HookeLegal',
+      component: HookeLegal
     }
     ]
   }

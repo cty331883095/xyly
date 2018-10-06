@@ -1,21 +1,28 @@
 <template>
-<div class="bottom-box">
-  <div class="abort-us-box">
-    <img src="~@/assets/img/logo.png" class="img-box">
-    <div class="tab-box">
-      <ul class="item-ul">
-        <li class="item-li" v-for="item in title" :key="item.id">{{item.name}}</li>
-      </ul>
+  <div class="bottom-box">
+    <div class="abort-us-box">
+      <img src="~@/assets/img/logo.png"
+           class="img-box">
+      <div class="tab-box">
+        <ul class="item-ul">
+          <router-link tag="li"
+                       :to="item.type"
+                       class="item-li"
+                       v-for="item in title"
+                       :key="item.id">
+            {{item.name}}
+          </router-link>
+        </ul>
+      </div>
+
+    </div>
+    <div class="txt-box">
+      <span class="txt">
+        Copyright @ 2018—2019 HOOKEBOX ALL Rights Reserved. 粤ICP备16089999
+      </span>
     </div>
 
   </div>
-  <div class="txt-box">
-    <span class="txt">
-      Copyright @ 2018—2019 HOOKEBOX ALL Rights Reserved. 粤ICP备16089999
-    </span>
-  </div>
-
-</div>
 </template>
 <script>
 export default {
@@ -23,17 +30,15 @@ export default {
   data () {
     return {
       title: [
-        {id: 1, name: '关于我们'},
-        {id: 2, name: '网站协议'},
-        {id: 3, name: '关注册与登陆'},
-        {id: 4, name: '联系我们'},
-        {id: 5, name: '法律声明'}
+        { id: 1, name: '关于我们', type: '/about' },
+        { id: 2, name: '网站协议', type: '/protocol' },
+        { id: 3, name: '法律声明', type: '/legal' }
       ]
     }
   },
   props: ['params'],
   computed: {},
-  mounted () {},
+  mounted () { },
   methods: {},
   components: {}
 }
@@ -64,8 +69,9 @@ export default {
         width: 600px;
         .item-li {
           padding: 10px 50px;
-          color: #FEFEFE;
+          color: #fefefe;
           font-size: 16px;
+          cursor: pointer;
         }
       }
     }
