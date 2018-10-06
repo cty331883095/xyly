@@ -19,7 +19,7 @@
           <p><strong>一、 定义</strong></p>
           <p><b>HOOKEBOX网站</b>：指包括HOOKEBOX（域名为 hookebox.com）网站及客户端。</p>
           <p><b>HOOKEBOX</b>：HOOKEBOX网站经营者的单称或合称，即深圳奎尼科技有限公司。</p>
-          <p><strong>HOOKEBOX网站服务</strong>：HOOKEBOX基于互联网，以包含HOOKEBOX网站、HOOKEBOX俱乐部网站及客户端等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项服务。</p>
+          <p><strong>HOOKEBOX网站服务</strong>：HOOKEBOX基于互联网，以包含HOOKEBOX网站及客户端等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项服务。</p>
           <p><strong>二、 协议范围</strong></p>
           <p><strong>2.1 </strong><strong>签约主体</strong></p>
           <p><strong>【平等主体】</strong>本协议由您与HOOKEBOX经营者共同缔结，本协议对您与HOOKEBOX网站经营者均具有合同效力。</p>
