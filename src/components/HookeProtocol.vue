@@ -17,7 +17,7 @@
           <p><strong>【审慎阅读】</strong>您在申请注册流程中点击同意本协议之前，应当认真阅读本协议。<strong>请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款将以粗体下划线标识，您应重点阅读。</strong>如您对协议有任何疑问，可向HOOKEBOX网站发起咨询。</p>
           <p><strong>【签约动作】</strong>当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，即表示您已充分阅读、理解并接受本协议的全部内容，并与HOOKEBOX达成一致，成为HOOKEBOX网站“用户”。<strong>阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止注册程序。</strong></p>
           <p><strong>一、 定义</strong></p>
-          <p><b>HOOKEBOX网站</b>：指包括HOOKEBOX（域名为 iamxk.com）、HOOKEBOX俱乐部（域名为xiaoka.club）等网站及客户端。</p>
+          <p><b>HOOKEBOX网站</b>：指包括HOOKEBOX（域名为 hookebox.com）网站及客户端。</p>
           <p><b>HOOKEBOX</b>：HOOKEBOX网站经营者的单称或合称，即深圳奎尼科技有限公司。</p>
           <p><strong>HOOKEBOX网站服务</strong>：HOOKEBOX基于互联网，以包含HOOKEBOX网站、HOOKEBOX俱乐部网站及客户端等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项服务。</p>
           <p><strong>二、 协议范围</strong></p>
