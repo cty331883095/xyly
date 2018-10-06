@@ -4,10 +4,7 @@
       <div class="box-inner">
         <h1 class="title-detail">关于我们</h1>
         <div class="article-detail">
-          <p>
-          </p>
           <div>
-            <p>&nbsp;</p>
             <p>HOOKEBOX（hookebox.com）成立于 2018 年，致力打造一个设计辅助工具交流的圈子，为设计师提供国内外设计辅助工具使用和应用环境等资讯内容。</p>
           </div>
           <h3>我们的宗旨</h3>
@@ -80,33 +77,35 @@ export default {
         padding-bottom: 10px;
         margin-bottom: 50px;
       }
-      h3 {
-        line-height: 1;
-        font-size: 24px;
-        color: #332c2b;
-        font-weight: bold;
-        margin: 10px 0 16px;
-        padding-left: 20px;
-        position: relative;
-        &::before {
-          content: "";
-          display: block;
-          width: 6px;
-          height: 100%;
-          position: absolute;
-          background-color: #7a99f2;
-          left: 0;
-          top: 0;
+      .article-detail {
+        h3 {
+          line-height: 1;
+          font-size: 24px;
+          color: #332c2b;
+          font-weight: bold;
+          margin: 10px 0 16px;
+          padding-left: 20px;
+          position: relative;
+          &::before {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 100%;
+            position: absolute;
+            background-color: #7a99f2;
+            left: 0;
+            top: 0;
+          }
         }
-      }
 
-      p {
-        padding-bottom: 30px;
-        color: #5f5d5d;
-        font-size: 16px;
-      }
-      .teshu-p {
-        padding-bottom: 10px;
+        p {
+          padding-bottom: 30px;
+          color: #5f5d5d;
+          font-size: 16px;
+        }
+        .teshu-p {
+          padding-bottom: 10px;
+        }
       }
     }
   }
