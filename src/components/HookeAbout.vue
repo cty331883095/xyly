@@ -77,35 +77,34 @@ export default {
         padding-bottom: 10px;
         margin-bottom: 50px;
       }
-      .article-detail {
-        h3 {
-          line-height: 1;
-          font-size: 24px;
-          color: #332c2b;
-          font-weight: bold;
-          margin: 10px 0 16px;
-          padding-left: 20px;
-          position: relative;
-          &::before {
-            content: "";
-            display: block;
-            width: 6px;
-            height: 100%;
-            position: absolute;
-            background-color: #7a99f2;
-            left: 0;
-            top: 0;
-          }
-        }
 
-        p {
-          padding-bottom: 30px;
-          color: #5f5d5d;
-          font-size: 16px;
+      h3 {
+        line-height: 1;
+        font-size: 24px;
+        color: #332c2b;
+        font-weight: bold;
+        margin: 10px 0 16px;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 100%;
+          position: absolute;
+          background-color: #7a99f2;
+          left: 0;
+          top: 0;
         }
-        .teshu-p {
-          padding-bottom: 10px;
-        }
+      }
+
+      p {
+        padding-bottom: 30px;
+        color: #5f5d5d;
+        font-size: 16px;
+      }
+      .teshu-p {
+        padding-bottom: 10px;
       }
     }
   }
