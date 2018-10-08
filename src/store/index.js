@@ -1,18 +1,52 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {HomePage} from './modules/HomePage.js'
-
+import {
+  Hooke
+} from './modules/Hooke'
 Vue.use(Vuex)
-
 const store = new Vuex.Store({
   state: {
-    Rate: window.screen.availWidth / 1920
+    Erate: 1,
+    clientWidth: 1920,
+    clientHeight: 1080,
+    url: '',
+    UserName: '',
+    UserPassWord: '',
+    ShowPopwindow: false,
+    ShowCreateAccount: false,
+    num: 1
   },
   getters: {},
   actions: {},
-  mutations: {},
+  mutations: {
+    setChartRation (state, Erate) {
+      state.Erate = Erate
+    },
+    setClientWidth (state, width) {
+      state.clientWidth = width
+    },
+    setClientHeight (state, height) {
+      state.clientHeight = height
+    },
+    setShowPopwindow (state, type) {
+      state.ShowPopwindow = type
+    },
+    setShowCreateAccount (state, type) {
+      state.ShowCreateAccount = type
+    },
+    setNun (state, num) {
+      state.num = num
+    },
+    setUserName (state, name) {
+      state.UserName = name
+    },
+    setUserPassWord (state, password) {
+      state.UserPassWord = password
+    }
+
+  },
   modules: {
-    HomePage
+    Hooke
   }
 })
 export default store

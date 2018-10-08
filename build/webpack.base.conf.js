@@ -32,9 +32,10 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      '@config': resolve('config'),
       '@': resolve('src')
     }
   },
@@ -73,16 +74,6 @@ module.exports = {
         options: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /.css$/,
-        loader: 'px2vw-view-loader',
-        query: {
-          viewportWidth: 1920,
-          viewportUnit: 'vw',
-          minPixelValue: 1,
-          decimal: 3
         }
       }
     ]
