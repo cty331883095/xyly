@@ -10,13 +10,11 @@
       </div>
     </div>
     <hooke-login></hooke-login>
-    <!-- <hooke-create-account></hooke-create-account> -->
   </div>
 </template>
 <script>
 import NavPage from '@/components/NavPage'
 import HookeLogin from '@/components/commom/HookeLogin'
-import HookeCreateAccount from '@/components/commom/HookeCreateAccount'
 import BottomNavigation from '@/components/commom/BottomNavigation.vue'
 export default {
   name: 'Hooke',
@@ -30,8 +28,7 @@ export default {
   components: {
     NavPage,
     HookeLogin,
-    BottomNavigation,
-    HookeCreateAccount
+    BottomNavigation
   }
 }
 </script>
