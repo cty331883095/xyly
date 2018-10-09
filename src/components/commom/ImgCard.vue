@@ -19,7 +19,7 @@
 import { mapMutations } from 'vuex'
 export default {
   name: 'ImgCard',
-  data() {
+  data () {
     return {
       title: 'templet',
       templike: false,
@@ -28,22 +28,22 @@ export default {
   },
   props: ['params'],
   computed: {},
-  mounted() { },
+  mounted () { },
   methods: {
     ...mapMutations(['setNun']),
-    clickHandler(params) {
+    clickHandler (params) {
       this.setNun(5)
       this.$router.push('/hookedetail/' + params)
     },
-    likeHandler() {
+    likeHandler () {
       console.log('like')
       this.templike = !this.templike
     },
-    collectHandler() {
+    collectHandler () {
       console.log('collect')
       this.tempcollect = !this.tempcollect
     },
-    downloadHandle() {
+    downloadHandle () {
       console.log('download')
     }
   },
