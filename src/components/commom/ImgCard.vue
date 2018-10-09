@@ -1,6 +1,8 @@
 <template>
   <div class="box-wrap">
-    <img :src="params"  class="img-style" @click=clickHandler(118)>
+    <img :src="params"
+         class="img-style"
+         @click=clickHandler(118)>
     <div class="bottom-box">
       <div class="like"
            :class="{active:templike}"
@@ -17,7 +19,7 @@
 import { mapMutations } from 'vuex'
 export default {
   name: 'ImgCard',
-  data () {
+  data() {
     return {
       title: 'templet',
       templike: false,
@@ -26,22 +28,22 @@ export default {
   },
   props: ['params'],
   computed: {},
-  mounted () { },
+  mounted() { },
   methods: {
     ...mapMutations(['setNun']),
-    clickHandler (params) {
+    clickHandler(params) {
       this.setNun(5)
       this.$router.push('/hookedetail/' + params)
     },
-    likeHandler () {
+    likeHandler() {
       console.log('like')
       this.templike = !this.templike
     },
-    collectHandler () {
+    collectHandler() {
       console.log('collect')
       this.tempcollect = !this.tempcollect
     },
-    downloadHandler () {
+    downloadHandle() {
       console.log('download')
     }
   },
@@ -66,13 +68,13 @@ export default {
     height: 22px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
     background: #fefefe;
     margin: 10px 0;
     .styel {
-      width: 22px;
-      height: 22px;
+      width: 16px;
+      height: 16px;
       background-repeat: no-repeat;
       background-size: 100% 100%;
       cursor: pointer;
