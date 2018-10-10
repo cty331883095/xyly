@@ -2,16 +2,17 @@
   <div class="wrap">
     <div class="wrap-box">
       <div class="content-img">
-        <img src="@/assets/img/box-50x50.png" class="img-style">
+        <img src="@/assets/img/box-50x50.png"
+             class="img-style">
         <span class="month-txt">Sper6</span>
-        <span class="belongto-txt">购买者</span>
+        <span class="belongto-txt">下载者</span>
       </div>
       <div class="icon-box">
         <span>大约3天前</span>
-        <i class="el-icon-delete"
-           v-if="isshow"></i>
-        <i class="el-icon-edit"
-           v-if="isshow"></i>
+        <span v-if="isshow"
+              class="txt">删除</span>
+        <span v-if="isshow"
+              class="txt">回复</span>
 
       </div>
     </div>
@@ -117,6 +118,11 @@ export default {
       font-size: 18px;
       .el-icon-delete {
         padding: 0 10px;
+      }
+      .txt {
+        padding: 0 5px;
+        color: #3a517d;
+        cursor: pointer;
       }
     }
   }
