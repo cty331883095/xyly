@@ -18,7 +18,6 @@ Vue.filter('NumFormat', function (value) {
 router.afterEach((to, from, next) => {
   window.scrollTo(0, 0)
 })
-
 window.Vue = new Vue({
   el: '#app',
   router,

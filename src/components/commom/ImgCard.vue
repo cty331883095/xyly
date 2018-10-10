@@ -43,7 +43,7 @@ export default {
       console.log('collect')
       this.tempcollect = !this.tempcollect
     },
-    downloadHandle () {
+    downloadHandler () {
       console.log('download')
     }
   },
