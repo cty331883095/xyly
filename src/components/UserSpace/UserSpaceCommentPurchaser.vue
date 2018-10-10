@@ -10,9 +10,9 @@
       <div class="icon-box">
         <span>大约3天前</span>
         <span v-if="isshow"
-              class="txt">删除</span>
+              class="txt1">删除</span>
         <span v-if="isshow"
-              class="txt">回复</span>
+              class="txt2">回复</span>
 
       </div>
     </div>
@@ -119,8 +119,13 @@ export default {
       .el-icon-delete {
         padding: 0 10px;
       }
-      .txt {
-        padding: 0 5px;
+      .txt1 {
+        padding: 0 3px 0 15px;
+        color: #3a517d;
+        cursor: pointer;
+      }
+      .txt2 {
+        padding: 0 3px 0 3px;
         color: #3a517d;
         cursor: pointer;
       }

@@ -8,12 +8,18 @@
                  'item-li-action':item.id ===2,
                  'item-li-effect':item.id ===3,
                  'active':num ===item.id
-                 }" v-for="item in switchTitle" :key="item.id" @click=clickHander(item.id)>
+                 }"
+            v-for="item in switchTitle"
+            :key="item.id"
+            @click=clickHander(item.id)>
         </li>
       </ul>
-      <picture-show-box :imgsdata="imgsdata" v-show="num===1"></picture-show-box>
-      <picture-show-box :imgsdata="imgsdata2" v-show="num===2"></picture-show-box>
-      <picture-show-box :imgsdata="imgsdata3" v-show="num===3"></picture-show-box>
+      <picture-show-box :imgsdata="imgsdata"
+                        v-show="num===1"></picture-show-box>
+      <picture-show-box :imgsdata="imgsdata2"
+                        v-show="num===2"></picture-show-box>
+      <picture-show-box :imgsdata="imgsdata3"
+                        v-show="num===3"></picture-show-box>
     </div>
   </div>
 </template>
@@ -66,7 +72,7 @@ export default {
   },
   props: ['params'],
   computed: {},
-  mounted () {},
+  mounted () { },
   methods: {
     clickHander (value) {
       this.num = value
