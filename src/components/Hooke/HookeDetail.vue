@@ -125,9 +125,11 @@ export default {
       ]
     }
   },
-  props: ['params'],
+  props: ['params', 'id'],
   computed: {},
-  mounted () { },
+  mounted () {
+    console.log(this.$route.params)
+  },
   methods: {
     clickHandler (num) {
       // if (num === 2) {

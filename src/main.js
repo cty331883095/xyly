@@ -15,9 +15,9 @@ Vue.filter('NumFormat', function (value) {
   var intPartFormat = intPart.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
   return intPartFormat
 })
-router.afterEach((to, from, next) => {
-  window.scrollTo(0, 0)
-})
+// router.afterEach((to, from, next) => {
+//   window.scrollTo(0, 0)
+// })
 window.Vue = new Vue({
   el: '#app',
   router,
